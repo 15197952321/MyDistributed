@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+    http://www.springframework.org/schema/mvc
+    http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-4.2.xsd
+    http://code.alibabatech.com/schema/dubbo
+    http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+	<!-- 配置property文件 -->
+	<context:property-placeholder location="classpath:conf/resource.properties"/>
+	<!-- 配置注解 -->
+	<context:component-scan base-package="com.item.action" />
+	<!-- 映射器和适配器 -->
+	<mvc:annotation-driven />
+
+	<!-- 视图解析器 -->
+	<!--<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/" />
+		<property name="suffix" value=".jsp" />
+	</bean>-->
+
+	<!-- Freemarker -->
+	<bean id="freeMarkerConfigurer"
+		  class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+		<property name="templateLoaderPath" value="/WEB-INF/ftl/"></property>
+		<property name="defaultEncoding" value="utf-8" />
+		<property name="freemarkerSettings">
+			<props>
+				<prop key="template_update_delay">1</prop>
+				<prop key="locale">UTF-8</prop>
+				<prop key="datetime_format">yyyy-MM-dd</prop><!-- 时间格式化 -->
+				<prop key="date_format">yyyy-MM-dd</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="freeMarkerViewResolver"
+		  class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver">
+		<property name="cache" value="true" />
+		<property name="prefix" value="" /><!-- 上面已经配了，这里就不用配啦 -->
+		<property name="suffix" value=".ftl" />
+		<property name="contentType" value="text/html;charset=UTF-8" />
+		<property name="allowSessionOverride" value="true" />
+		<property name="allowRequestOverride" value="true" />
+		<property name="exposeSpringMacroHelpers" value="true" />
+		<property name="exposeRequestAttributes" value="true" />
+		<property name="exposeSessionAttributes" value="true" />
+		<property name="requestContextAttribute" value="request" />
+	</bean>
+
+
+	<!-- 释放静态资源 -->
+	<mvc:default-servlet-handler></mvc:default-servlet-handler>
+
+	<!-- 设置Converter转换器 -->
+	<!--<bean id="conversionService"
+		  class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+		&lt;!&ndash; 设置多个转换器 &ndash;&gt;
+		<property name="converters">
+				<bean class="com.common.utils.DateTimeConverter"></bean>
+		</property>
+	</bean>-->
+
+	<!-- 引用dubbo服务 -->
+	<dubbo:consumer check="false" />
+	<dubbo:application name="mydubbo_manager_web"/>
+	<dubbo:registry protocol="zookeeper" address="192.168.25.129:2181"/>
+	<dubbo:reference interface="com.manager.service.TbItemService" id="itemService" />
+
+</beans>
