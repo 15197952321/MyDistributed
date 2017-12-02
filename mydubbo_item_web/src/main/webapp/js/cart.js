@@ -23,22 +23,22 @@ var sfAddCart ={
       This = $(this);
       //是否是首页商品添加购物车标识
       var indexFlag = This.attr("indexFlag");
-	  //是否是生鲜频道页添加购物车标识
-	  var freshFlag = This.attr("freshFlag");
+      //是否是生鲜频道页添加购物车标识
+      var freshFlag = This.attr("freshFlag");
       sfAddCart.pid = This.attr("pid");
       if(typeof(indexFlag) == "undefined"){
-		if(typeof(freshFlag) == "undefined"){
-			 //其它页面商品添加购物车
-			setTimeout(function(){cartAdd(sfAddCart.pid, 0, 1, 5);},100);
-		}else{
-			//生鲜频道页商品添加购物车
-			setTimeout(function(){cartAdd(sfAddCart.pid, 0, 1, 13,1,This);},100);
-		}
-       
+        if(typeof(freshFlag) == "undefined"){
+          //其它页面商品添加购物车
+          setTimeout(function(){cartAdd(sfAddCart.pid, 0, 1, 5);},100);
+        }else{
+          //生鲜频道页商品添加购物车
+          setTimeout(function(){cartAdd(sfAddCart.pid, 0, 1, 13,1,This);},100);
+        }
+
       }else{
         //首页页商品添加购物车
         setTimeout(function(){cartAdd(sfAddCart.pid, 0, 1, 7,1,This);},100);
-      }	
+      }
     });
   },
   cartHover:function(){
@@ -134,12 +134,12 @@ var sfAddCart ={
         $("#side_cart").trigger("mouseleave");
       })
     }, 3E3);
-  }	
+  }
 };
 
 /*
-   逛商品加购物车
-   */
+ 逛商品加购物车
+ */
 function hisCartAdd(pid){
   cartAdd(pid,0,0,6);
   $.ajax({
@@ -149,13 +149,13 @@ function hisCartAdd(pid){
     url: "/product/delHistory/",
     data: {pid:pid},
     success: function(str){
-      getHistory();	 
+      getHistory();
     }
   });
 }
 /**
-  获了逛数据
-  */
+ 获了逛数据
+ */
 function getHistory(){
   $.post("/product/guang/",{},function(str){
     if(str){
@@ -165,99 +165,99 @@ function getHistory(){
 }
 
 /*购物车删除单个商品
-  @param  string value   活动类型-活动id-商品id  这三者组合
-  */
+ @param  string value   活动类型-活动id-商品id  这三者组合
+ */
 function cartDel(value){
   $.ajax({
     url  : cartHostUrl+'/cart/delCartProduct/',
-  type : 'GET',
-  //dataType: 'json',
-  dataType: "jsonp",  //返回json格式的数据   
-  jsonp:"callback",
-  data : {val : new Array(value)},
-  success: function(msg){
-    if(msg.error==1){
-      if($('#'+msg.info.type).length > 0){
-        $('#'+msg.info.type).html(msg.data);
-        chmodeNum(msg.info.cart);
+    type : 'GET',
+    //dataType: 'json',
+    dataType: "jsonp",  //返回json格式的数据
+    jsonp:"callback",
+    data : {val : new Array(value)},
+    success: function(msg){
+      if(msg.error==1){
+        if($('#'+msg.info.type).length > 0){
+          $('#'+msg.info.type).html(msg.data);
+          chmodeNum(msg.info.cart);
+        }
+        getCartList();//更新右上角的购物列表
+        //changeCheckboxStats();
+      }else{
+        jAlert(msg.info);
       }
-      getCartList();//更新右上角的购物列表
-      //changeCheckboxStats();
-    }else{
-      jAlert(msg.info);
     }
-  }
   });
 }
 
 /**
-  获取每个页面头部的购物列表的方法
-  */
+ 获取每个页面头部的购物列表的方法
+ */
 function getCartList(){
   $.ajax({
     url  : cartHostUrl+'/cart/headerCart/',
-  type : 'GET',
-  dataType: "jsonp",  //返回json格式的数据   
-  jsonp:"callback",
-  data : {},
-  success: function(msg){
-    if(msg.error==1){
-      $('#cartNum').html(msg.info.num);
-      $('#cart_lists').html(msg.data);
-      if(msg.info.num>0){
-        $("#topCart").find("s").addClass("setCart");
-      }
-      if($('#showcart').length > 0){
-        $('#showcart').html('购物车共计'+msg.info.num+'件商品，合计 '+msg.info.price+'元');
-      }
-      if($('#list_cart').length > 0){
-        //$('#list_cart').html(msg.data);
-        $('#list_cart').html(msg.data1);
-        $('.s-cart-num').html(msg.info.num);
-        var numList = $("li","#list_cart").length;
-        0 !== numList && $('.s-cart-num').addClass("s-cart-add");
-        switch(numList)
-        {
-          case 0:
-            $(".cart-shopping").css("bottom","152px");
-            $(".cart-wrap .cart-arr").css("bottom","10px");
-            $('.s-cart-num').removeClass("s-cart-add");
-            $('.s-cart-num').hide();
-            break;
-          case 1:
-            $(".cart-shopping").css("bottom","50px");
-            $(".cart-wrap .cart-arr").css("bottom","110px");
-            $('.s-cart-num').show();
-            break;
-          default:
-            $(".cart-shopping").css("bottom",0);
-            $(".cart-wrap .cart-arr").css("bottom","160px");
-            $('.s-cart-num').show();
+    type : 'GET',
+    dataType: "jsonp",  //返回json格式的数据
+    jsonp:"callback",
+    data : {},
+    success: function(msg){
+      if(msg.error==1){
+        $('#cartNum').html(msg.info.num);
+        $('#cart_lists').html(msg.data);
+        if(msg.info.num>0){
+          $("#topCart").find("s").addClass("setCart");
         }
+        if($('#showcart').length > 0){
+          $('#showcart').html('购物车共计'+msg.info.num+'件商品，合计 '+msg.info.price+'元');
+        }
+        if($('#list_cart').length > 0){
+          //$('#list_cart').html(msg.data);
+          $('#list_cart').html(msg.data1);
+          $('.s-cart-num').html(msg.info.num);
+          var numList = $("li","#list_cart").length;
+          0 !== numList && $('.s-cart-num').addClass("s-cart-add");
+          switch(numList)
+          {
+            case 0:
+              $(".cart-shopping").css("bottom","152px");
+              $(".cart-wrap .cart-arr").css("bottom","10px");
+              $('.s-cart-num').removeClass("s-cart-add");
+              $('.s-cart-num').hide();
+              break;
+            case 1:
+              $(".cart-shopping").css("bottom","50px");
+              $(".cart-wrap .cart-arr").css("bottom","110px");
+              $('.s-cart-num').show();
+              break;
+            default:
+              $(".cart-shopping").css("bottom",0);
+              $(".cart-wrap .cart-arr").css("bottom","160px");
+              $('.s-cart-num').show();
+          }
+        }
+      }else{
+        jAlert(msg.info);
       }
-    }else{
-      jAlert(msg.info);
     }
-  }
   });
 }
 
 
 /*
-   购买了还购买了
-   */
+ 购买了还购买了
+ */
 function buyelse(pid){
   $.ajax({
     url  : wwwHostUrl+'/product/alsoBuy',
-  type : 'GET',
-  dataType: 'html',
-  data : {pid:pid},
-  success: function(htmlcode){
-    //alsoBuy = htmlcode;
-    if($('#elsebuy').length > 0){
-      $('#elsebuy').html(htmlcode);
+    type : 'GET',
+    dataType: 'html',
+    data : {pid:pid},
+    success: function(htmlcode){
+      //alsoBuy = htmlcode;
+      if($('#elsebuy').length > 0){
+        $('#elsebuy').html(htmlcode);
+      }
     }
-  }
   })
 }
 
@@ -270,16 +270,21 @@ function buyelse(pid){
 //@param obj 加入按钮对象
 //@param cfrom 从哪里点击的购物按钮
 function cartAdd(product_id,cart_type,opencity_id, flag,bs, obj, cfrom){
-    //取购物车商品数量
-	var num = $("#number_" + product_id).val();
-	//拼装url参数，做跳转
-	location.href="http://localhost:8089/cart/add/"+product_id+".html?num=" + num;
+  var _ticket = $.cookie("token");
+  if(!_ticket){
+    jAlert('请您先登录');
+    return ;
+  }
+  //取购物车商品数量
+  var num = $("#number_" + product_id).val();
+  //拼装url参数，做跳转
+  location.href="http://localhost:8089/cart/add/"+product_id+".html?num=" + num;
 }
 
 //首页添加购物车
 function cartIndex(obj,i,pid,bs){
-  if (typeof(bs) == "undefined") { 
-    bs = 1; 
+  if (typeof(bs) == "undefined") {
+    bs = 1;
   }
   $(".gWindow").remove();//删除所有弹出层
   var This = $(obj);
@@ -391,8 +396,8 @@ function yibo(type,product_id,product_num){
     del = 1;
   }
   _adwq.push([ '_setDataType',
-      type  
-      ]);
+    type
+  ]);
   $.ajax({
     url  : cartHostUrl+'/ajax/getproduct/',
     type : 'GET',
@@ -405,10 +410,10 @@ function yibo(type,product_id,product_num){
 
       _adwq.push([ '_setCustomer',
         json.userid   //1234567是一个例子，请换成当前登陆用户ID或用户名
-        ]);
+      ]);
       // 下面代码是商品组代码，根据订单中包括多少种商品来部署，每种商品部署一组
       //商品组一组开始
-      var webtrekk = new Object(); 
+      var webtrekk = new Object();
       webtrekk.product = new Array();
       webtrekk.productCategory1 = new Array();
       webtrekk.productCategory2 = new Array();
@@ -426,7 +431,7 @@ function yibo(type,product_id,product_num){
               product_num,        // 1是一个例子，请填入商品数量  - 必填项
               b.category_id,     // A123是一个例子，请填入商品分类编号  - 必填项
               b.category_name        // 家电是一个例子，请填入商品分类名称  - 必填项
-              ]);
+            ]);
           }
           webtrekk.product.push(b.product_sn);
           webtrekk.productCategory1.push(b.category_one);
@@ -447,30 +452,30 @@ function yibo(type,product_id,product_num){
 }
 
 function webtrekkSend(webtrekk){
-	var pageConfig = { 
-		linkTrack :"link",  
-		heatmap :"1"  
-	}; 
-	var wt = new webtrekkV3(pageConfig);
-	wt.sendinfo({
-		contentId:"WEB:购物车:加入购物车",
-		contentGroup:{ 
-			1 :"WEB:购物车",2 :"加入购物车",3 :"加入购物车" 
-		}, 
-		// 以下代码用来记录添加购物车时的商品信息
-		product:webtrekk.product.join(";"), // 请填写商品 ID
-		productCategory:{ 
-			1 :webtrekk.productCategory1.join(";"), // 请填写商品一级类别名称
-			2 :webtrekk.productCategory2.join(";"), // 请填写商品二级类别名称
-			3 :webtrekk.productCategory3.join(";") // 请填写商品三级类别名称
-		},
-		productQuantity:webtrekk.productQuantity.join(";"), // 请填写用户加入购物车时的商品数量
-		productCost:webtrekk.productCost.join(";"), // 请填写用户加入购物车时的商品总价值（单价×数量）
-		productStatus:"add", // 固定值，请勿修改
-		customEcommerceParameter:{  
-			2 :"加入购物车" // 固定值，请勿修改
-		} 
-	});
+  var pageConfig = {
+    linkTrack :"link",
+    heatmap :"1"
+  };
+  var wt = new webtrekkV3(pageConfig);
+  wt.sendinfo({
+    contentId:"WEB:购物车:加入购物车",
+    contentGroup:{
+      1 :"WEB:购物车",2 :"加入购物车",3 :"加入购物车"
+    },
+    // 以下代码用来记录添加购物车时的商品信息
+    product:webtrekk.product.join(";"), // 请填写商品 ID
+    productCategory:{
+      1 :webtrekk.productCategory1.join(";"), // 请填写商品一级类别名称
+      2 :webtrekk.productCategory2.join(";"), // 请填写商品二级类别名称
+      3 :webtrekk.productCategory3.join(";") // 请填写商品三级类别名称
+    },
+    productQuantity:webtrekk.productQuantity.join(";"), // 请填写用户加入购物车时的商品数量
+    productCost:webtrekk.productCost.join(";"), // 请填写用户加入购物车时的商品总价值（单价×数量）
+    productStatus:"add", // 固定值，请勿修改
+    customEcommerceParameter:{
+      2 :"加入购物车" // 固定值，请勿修改
+    }
+  });
 }
 
 //carwindow遮罩
@@ -484,7 +489,7 @@ function car_ie6hack(){
 //判断正整数
 function checkRate(input)
 {
-  var re = /^[0-9]*[1-9][0-9]*$/;    
+  var re = /^[0-9]*[1-9][0-9]*$/;
   if (!re.test(input))
   {
     return false;
