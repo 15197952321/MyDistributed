@@ -14,7 +14,7 @@ function getUserCb(data){
 	//alert("222");
 	if(data.status == 200){
 		var username = data.data.username;
-		var html = username + "，欢迎来到华瑞购物网！<a href=\"http://www.e3mall.cn/user/logout.html\" class=\"link-logout\">[退出]</a>";
+		var html = username + "，欢迎来到华瑞购物网！<a href=\"http://localhost:8088/user/signout/token\" class=\"link-logout\">[退出]</a>";
 		$("#loginbar").html(html);
 	}
 }
