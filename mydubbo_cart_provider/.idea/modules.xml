@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/mydubbo_cart_interface/mydubbo_cart_interface.iml" filepath="$PROJECT_DIR$/mydubbo_cart_interface/mydubbo_cart_interface.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mydubbo_cart_mapper/mydubbo_cart_mapper.iml" filepath="$PROJECT_DIR$/mydubbo_cart_mapper/mydubbo_cart_mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mydubbo_cart_model/mydubbo_cart_model.iml" filepath="$PROJECT_DIR$/mydubbo_cart_model/mydubbo_cart_model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mydubbo_cart_provider.iml" filepath="$PROJECT_DIR$/mydubbo_cart_provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mydubbo_cart_service/mydubbo_cart_service.iml" filepath="$PROJECT_DIR$/mydubbo_cart_service/mydubbo_cart_service.iml" />
+    </modules>
+  </component>
+</project>

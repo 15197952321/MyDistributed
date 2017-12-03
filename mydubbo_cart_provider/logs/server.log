@@ -1,0 +1,990 @@
+
+
+[INFO ] 2017-12-03 10:30:54,816 method:org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)
+Root WebApplicationContext: initialization started
+
+
+[INFO ] 2017-12-03 10:30:55,042 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing Root WebApplicationContext: startup date [Sun Dec 03 10:30:55 CST 2017]; root of context hierarchy
+
+
+[INFO ] 2017-12-03 10:30:55,142 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_cart_provider\mydubbo_cart_service\target\classes\spring\applicationContext-dao.xml]
+
+
+[INFO ] 2017-12-03 10:30:55,500 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_cart_provider\mydubbo_cart_service\target\classes\spring\applicationContext-redis.xml]
+
+
+[INFO ] 2017-12-03 10:30:55,543 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_cart_provider\mydubbo_cart_service\target\classes\spring\applicationContext-service.xml]
+
+
+[INFO ] 2017-12-03 10:30:55,768 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2017-12-03 10:30:55,824 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_cart_provider\mydubbo_cart_service\target\classes\spring\applicationContext-trans.xml]
+
+
+[INFO ] 2017-12-03 10:30:56,257 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from file [E:\S4\last\dubbo_work\myFileService\mydubbo_cart_provider\mydubbo_cart_service\target\classes\conf\db.properties]
+
+
+[INFO ] 2017-12-03 10:30:56,258 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from file [E:\S4\last\dubbo_work\myFileService\mydubbo_cart_provider\mydubbo_cart_service\target\classes\conf\resource.properties]
+
+
+[INFO ] 2017-12-03 10:30:56,277 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2017-12-03 10:30:58,562 method:com.alibaba.dubbo.config.spring.ServiceBean.onApplicationEvent(ServiceBean.java:107)
+ [DUBBO] The service ready on spring started. service: com.cart.service.CartService, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 10:30:58,872 method:com.alibaba.dubbo.config.ServiceConfig.exportLocal(ServiceConfig.java:510)
+ [DUBBO] Export dubbo service com.cart.service.CartService to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 10:30:58,873 method:com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:470)
+ [DUBBO] Export dubbo service com.cart.service.CartService to url dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&dubbo=2.5.3&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 10:30:58,873 method:com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:481)
+ [DUBBO] Register dubbo service com.cart.service.CartService url dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&dubbo=2.5.3&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601 to registry registry://192.168.25.129:2181/com.alibaba.dubbo.registry.RegistryService?application=mydubbo_cart_p&dubbo=2.5.3&pid=9476&registry=zookeeper&timestamp=1512268258576, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 10:30:59,335 method:com.alibaba.dubbo.remoting.transport.AbstractServer.<init>(AbstractServer.java:69)
+ [DUBBO] Start NettyServer bind /0.0.0.0:20884, export /192.168.0.171:20884, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 10:30:59,384 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:232)
+ [DUBBO] Load registry store file C:\Users\Administrator\.dubbo\dubbo-registry-192.168.25.129.cache, data: {com.manager.service.TbItemService=empty://192.168.0.171/com.manager.service.TbItemService?application=mydubbo_manager_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.manager.service.TbItemService&methods=addItem,deleteItem,up,updateItem,findItemDescById,down,findAll,findItemById&pid=11120&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512126040029 empty://192.168.0.171/com.manager.service.TbItemService?application=mydubbo_manager_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.manager.service.TbItemService&methods=addItem,deleteItem,up,updateItem,findItemDescById,down,findAll,findItemById&pid=11120&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512126040029 dubbo://192.168.0.171:20880/com.manager.service.TbItemService?anyhost=true&application=mydubbo_manager_p&dubbo=2.5.3&interface=com.manager.service.TbItemService&methods=addItem,deleteItem,up,updateItem,findItemDescById,down,findAll,findItemById&pid=9472&side=provider&timeout=600000&timestamp=1512125982271, com.huarui.service.UsersService=empty://192.168.56.1:20885/com.huarui.service.UsersService?anyhost=true&application=usersService_p&category=configurators&check=false&dubbo=2.5.3&interface=com.huarui.service.UsersService&methods=findall&pid=8944&side=provider&timeout=600000&timestamp=1510282573288, com.content.service.TbContentService=empty://192.168.0.171:20881/com.content.service.TbContentService?anyhost=true&application=mydubbo_content_p&category=configurators&check=false&dubbo=2.5.3&interface=com.content.service.TbContentService&methods=deleteTbContent,addTbContent,findAll,updateTbContent,findByCategoryId&pid=5424&side=provider&timeout=600000&timestamp=1512125390731, com.user.service.TbUserService=empty://192.168.0.171/com.user.service.TbUserService?application=mydubbo_user_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.user.service.TbUserService&methods=addUser,toRedisByCookie,checkInfo,login&pid=17564&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512132251330 empty://192.168.0.171/com.user.service.TbUserService?application=mydubbo_user_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.user.service.TbUserService&methods=addUser,toRedisByCookie,checkInfo,login&pid=17564&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512132251330 dubbo://192.168.0.171:20883/com.user.service.TbUserService?anyhost=true&application=mydubbo_user_p&dubbo=2.5.3&interface=com.user.service.TbUserService&methods=addUser,toRedisByCookie,checkInfo,login&pid=1240&side=provider&timeout=600000&timestamp=1512125359077, com.content.service.TbContentCategoryService=empty://192.168.0.171:20881/com.content.service.TbContentCategoryService?anyhost=true&application=mydubbo_content_p&category=configurators&check=false&dubbo=2.5.3&interface=com.content.service.TbContentCategoryService&methods=updateTbContentCategory,findTbContentCategory,addTbContentCategory,deleteTbContentCategory&pid=5424&side=provider&timeout=600000&timestamp=1512125389899, com.manager.service.TbItemCatService=empty://192.168.0.171:20880/com.manager.service.TbItemCatService?anyhost=true&application=mydubbo_manager_p&category=configurators&check=false&dubbo=2.5.3&interface=com.manager.service.TbItemCatService&methods=findAllByPid&pid=9676&side=provider&timeout=600000&timestamp=1511855724996, com.search.service.SearchItemService=empty://192.168.0.171/com.search.service.SearchItemService?application=mydubbo_search_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.search.service.SearchItemService&methods=selectSolr,findAllItemByInputSolr&pid=3112&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512125472185 empty://192.168.0.171/com.search.service.SearchItemService?application=mydubbo_search_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.search.service.SearchItemService&methods=selectSolr,findAllItemByInputSolr&pid=3112&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512125472185 dubbo://192.168.0.171:20882/com.search.service.SearchItemService?anyhost=true&application=mydubbo_search_p&dubbo=2.5.3&interface=com.search.service.SearchItemService&methods=deleteSolr,addOrUpdateSolr,selectSolr,findAllItemByInputSolr&pid=3872&side=provider&timeout=600000&timestamp=1512125429633}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 10:30:59,436 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2017-12-03 10:30:59,457 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+
+
+[INFO ] 2017-12-03 10:30:59,458 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=PC-20161220RILH
+
+
+[INFO ] 2017-12-03 10:30:59,458 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.8.0_131
+
+
+[INFO ] 2017-12-03 10:30:59,458 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2017-12-03 10:30:59,458 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=D:\jdk\Java\jdk1.8.0_131\jre
+
+
+[INFO ] 2017-12-03 10:30:59,459 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=E:\S4\maven\maven01\apache-maven-3.3.9-bin\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar;D:\idea\IntelliJ IDEA 15.0.6\lib\idea_rt.jar
+
+
+[INFO ] 2017-12-03 10:30:59,459 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=D:\jdk\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;E:\oracle\product\10.2.0\db_1\bin;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter\Driver;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\jdk1.7(32wei)\jdk_1.7\Java\jdk1.7.0_72\bin;D:\jdk1.7(32wei)\jdk_1.7\Java\jdk1.7.0_72\jre\bin;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files (x86)\Microsoft SQL Server\80\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Program Files (x86)\Microsoft SQL Server\90\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 8\Common7\IDE\PrivateAssemblies\;D:\mysql\mysql-5.7.17-winx64\bin;D:\adt-bundle-windows-x86_64-20140702\sdk\platform-tools;C:\Program Files\TortoiseSVN\bin;D:\git\Git\cmd;E:\S4\maven\maven01\apache-maven-3.3.9-bin\apache-maven-3.3.9\bin;;.
+
+
+[INFO ] 2017-12-03 10:30:59,459 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+
+
+[INFO ] 2017-12-03 10:30:59,460 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2017-12-03 10:30:59,460 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Windows 7
+
+
+[INFO ] 2017-12-03 10:30:59,460 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=amd64
+
+
+[INFO ] 2017-12-03 10:30:59,461 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=6.1
+
+
+[INFO ] 2017-12-03 10:30:59,462 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=Administrator
+
+
+[INFO ] 2017-12-03 10:30:59,462 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=C:\Users\Administrator
+
+
+[INFO ] 2017-12-03 10:30:59,462 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=E:\S4\last\dubbo_work\myFileService\mydubbo_cart_provider
+
+
+[INFO ] 2017-12-03 10:30:59,464 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.25.129:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@517cee19
+
+
+[INFO ] 2017-12-03 10:30:59,525 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.129/192.168.25.129:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2017-12-03 10:30:59,528 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.25.129/192.168.25.129:2181, initiating session
+
+
+[INFO ] 2017-12-03 10:30:59,543 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.25.129/192.168.25.129:2181, sessionid = 0x1601be6b3320001, negotiated timeout = 30000
+
+
+[INFO ] 2017-12-03 10:30:59,547 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2017-12-03 10:30:59,551 method:com.alibaba.dubbo.registry.support.AbstractRegistry.register(AbstractRegistry.java:302)
+ [DUBBO] Register: dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&dubbo=2.5.3&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 10:30:59,631 method:com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(AbstractRegistry.java:325)
+ [DUBBO] Subscribe: provider://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&category=configurators&check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 10:30:59,677 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url provider://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&category=configurators&check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601, urls: [empty://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&category=configurators&check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601], dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 10:30:59,749 method:org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:347)
+Root WebApplicationContext: initialization completed in 4928 ms
+
+
+[INFO ] 2017-12-03 10:49:00,738 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:655)
+{dataSource-1} inited
+
+
+[WARN ] 2017-12-03 10:56:50,350 method:com.alibaba.dubbo.remoting.transport.AbstractServer.disconnected(AbstractServer.java:197)
+ [DUBBO] All clients has discontected from /192.168.0.171:20884. You can graceful shutdown now., dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 10:56:50,360 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(DubboProtocol.java:130)
+ [DUBBO] disconected from /192.168.0.171:50844,url:dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&channel.readonly.sent=true&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[WARN ] 2017-12-03 11:35:33,569 method:com.alibaba.dubbo.remoting.transport.AbstractServer.disconnected(AbstractServer.java:197)
+ [DUBBO] All clients has discontected from /192.168.0.171:20884. You can graceful shutdown now., dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 11:35:34,848 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(DubboProtocol.java:130)
+ [DUBBO] disconected from /192.168.0.171:52585,url:dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&channel.readonly.sent=true&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[WARN ] 2017-12-03 11:35:36,979 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x1601be6b3320001 for server 192.168.25.129/192.168.25.129:2181, unexpected error, closing socket connection and attempting reconnect
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doIO(ClientCnxnSocketNIO.java:68)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:366)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2017-12-03 11:35:37,726 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (Disconnected)
+
+
+[INFO ] 2017-12-03 11:36:03,114 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.129/192.168.25.129:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-03 11:36:07,136 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x1601be6b3320001 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Network is unreachable: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2017-12-03 11:36:08,882 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.129/192.168.25.129:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-03 11:36:08,883 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x1601be6b3320001 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Network is unreachable: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2017-12-03 11:36:10,656 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.129/192.168.25.129:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-03 11:36:10,657 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x1601be6b3320001 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Network is unreachable: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2017-12-03 11:58:36,964 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.129/192.168.25.129:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-03 11:58:38,307 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x1601be6b3320001 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Network is unreachable: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2017-12-03 11:58:40,567 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.129/192.168.25.129:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-03 11:58:40,568 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x1601be6b3320001 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Network is unreachable: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2017-12-03 11:58:42,182 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.129/192.168.25.129:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-03 11:58:42,183 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x1601be6b3320001 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Network is unreachable: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2017-12-03 11:58:44,092 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.129/192.168.25.129:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2017-12-03 11:58:49,540 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.25.129/192.168.25.129:2181, initiating session
+
+
+[WARN ] 2017-12-03 11:59:10,802 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1285)
+Unable to reconnect to ZooKeeper service, session 0x1601be6b3320001 has expired
+
+
+[INFO ] 2017-12-03 11:59:10,820 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1154)
+Unable to reconnect to ZooKeeper service, session 0x1601be6b3320001 has expired, closing socket connection
+
+
+[INFO ] 2017-12-03 11:59:10,835 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (Expired)
+
+
+[INFO ] 2017-12-03 11:59:10,880 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.25.129:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@517cee19
+
+
+[INFO ] 2017-12-03 11:59:11,086 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.129/192.168.25.129:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2017-12-03 11:59:11,215 method:com.alibaba.dubbo.registry.support.FailbackRegistry.recover(FailbackRegistry.java:282)
+ [DUBBO] Recover register url [dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&dubbo=2.5.3&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601], dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 11:59:11,365 method:com.alibaba.dubbo.registry.support.FailbackRegistry.recover(FailbackRegistry.java:292)
+ [DUBBO] Recover subscribe url [provider://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&category=configurators&check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601], dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 11:59:11,639 method:org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:519)
+EventThread shut down for session: 0x1601be6b3320001
+
+
+[INFO ] 2017-12-03 11:59:15,574 method:com.alibaba.dubbo.registry.support.FailbackRegistry.retry(FailbackRegistry.java:309)
+ [DUBBO] Retry register [dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&dubbo=2.5.3&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601], dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[WARN ] 2017-12-03 11:59:32,108 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x0 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2017-12-03 11:59:33,219 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.129/192.168.25.129:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2017-12-03 11:59:33,242 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.25.129/192.168.25.129:2181, initiating session
+
+
+[INFO ] 2017-12-03 11:59:33,613 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.25.129/192.168.25.129:2181, sessionid = 0x1601be6b3320010, negotiated timeout = 30000
+
+
+[INFO ] 2017-12-03 11:59:33,652 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[WARN ] 2017-12-03 11:59:34,424 method:com.alibaba.dubbo.remoting.transport.AbstractServer.disconnected(AbstractServer.java:197)
+ [DUBBO] All clients has discontected from /192.168.0.171:20884. You can graceful shutdown now., dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 11:59:34,608 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(DubboProtocol.java:130)
+ [DUBBO] disconected from /192.168.0.171:54388,url:dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&channel.readonly.sent=true&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 11:59:34,642 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url provider://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&category=configurators&check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601, urls: [empty://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&category=configurators&check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601], dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 11:59:34,688 method:com.alibaba.dubbo.registry.support.FailbackRegistry.retry(FailbackRegistry.java:354)
+ [DUBBO] Retry subscribe {provider://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&category=configurators&check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601=[com.alibaba.dubbo.registry.integration.RegistryProtocol$OverrideListener@b07c11]}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 11:59:35,178 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url provider://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&category=configurators&check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601, urls: [empty://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&category=configurators&check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601], dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[WARN ] 2017-12-03 12:32:45,722 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x1601be6b3320010 for server 192.168.25.129/192.168.25.129:2181, unexpected error, closing socket connection and attempting reconnect
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doIO(ClientCnxnSocketNIO.java:68)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:366)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2017-12-03 12:32:45,923 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (Disconnected)
+
+
+[INFO ] 2017-12-03 12:32:47,519 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.129/192.168.25.129:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-03 12:32:47,553 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x1601be6b3320010 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.NoRouteToHostException: No route to host: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2017-12-03 12:32:49,022 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.129/192.168.25.129:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-03 12:32:49,025 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x1601be6b3320010 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.NoRouteToHostException: No route to host: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[WARN ] 2017-12-03 12:32:50,156 method:com.alibaba.dubbo.remoting.transport.AbstractServer.disconnected(AbstractServer.java:197)
+ [DUBBO] All clients has discontected from /192.168.0.171:20884. You can graceful shutdown now., dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 12:32:50,177 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(DubboProtocol.java:130)
+ [DUBBO] disconected from /192.168.0.171:54465,url:dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&channel.readonly.sent=true&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 15:00:18,067 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.129/192.168.25.129:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-03 15:00:18,079 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x1601be6b3320010 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Network is unreachable: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2017-12-03 15:00:19,183 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.129/192.168.25.129:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-03 15:00:19,184 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x1601be6b3320010 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.SocketException: Network is unreachable: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2017-12-03 15:00:21,020 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.129/192.168.25.129:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-03 15:00:42,092 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1162)
+Session 0x1601be6b3320010 for server null, unexpected error, closing socket connection and attempting reconnect
+java.net.ConnectException: Connection timed out: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:361)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1141)
+
+
+[INFO ] 2017-12-03 15:00:43,868 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.129/192.168.25.129:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[WARN ] 2017-12-03 15:00:53,255 method:com.alibaba.dubbo.remoting.transport.AbstractServer.disconnected(AbstractServer.java:197)
+ [DUBBO] All clients has discontected from /192.168.0.171:20884. You can graceful shutdown now., dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 15:00:53,286 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(DubboProtocol.java:130)
+ [DUBBO] disconected from /192.168.0.171:55911,url:dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&channel.readonly.sent=true&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 15:00:53,293 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.25.129/192.168.25.129:2181, initiating session
+
+
+[WARN ] 2017-12-03 15:00:53,297 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1285)
+Unable to reconnect to ZooKeeper service, session 0x1601be6b3320010 has expired
+
+
+[INFO ] 2017-12-03 15:00:53,297 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1154)
+Unable to reconnect to ZooKeeper service, session 0x1601be6b3320010 has expired, closing socket connection
+
+
+[INFO ] 2017-12-03 15:00:53,300 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (Expired)
+
+
+[INFO ] 2017-12-03 15:00:53,336 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.25.129:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@517cee19
+
+
+[INFO ] 2017-12-03 15:00:53,339 method:org.apache.zookeeper.ClientCnxn$EventThread.run(ClientCnxn.java:519)
+EventThread shut down for session: 0x1601be6b3320010
+
+
+[INFO ] 2017-12-03 15:00:53,440 method:com.alibaba.dubbo.registry.support.FailbackRegistry.recover(FailbackRegistry.java:282)
+ [DUBBO] Recover register url [dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&dubbo=2.5.3&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601], dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 15:00:53,475 method:com.alibaba.dubbo.registry.support.FailbackRegistry.recover(FailbackRegistry.java:292)
+ [DUBBO] Recover subscribe url [provider://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&category=configurators&check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601], dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 15:00:53,518 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.129/192.168.25.129:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2017-12-03 15:00:53,519 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.25.129/192.168.25.129:2181, initiating session
+
+
+[INFO ] 2017-12-03 15:00:53,535 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.25.129/192.168.25.129:2181, sessionid = 0x1601be6b3320015, negotiated timeout = 30000
+
+
+[INFO ] 2017-12-03 15:00:53,535 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2017-12-03 15:00:53,538 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url provider://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&category=configurators&check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601, urls: [empty://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&category=configurators&check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601], dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 15:00:55,538 method:com.alibaba.dubbo.registry.support.FailbackRegistry.retry(FailbackRegistry.java:309)
+ [DUBBO] Retry register [dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&dubbo=2.5.3&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601], dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 15:00:55,626 method:com.alibaba.dubbo.registry.support.FailbackRegistry.retry(FailbackRegistry.java:354)
+ [DUBBO] Retry subscribe {provider://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&category=configurators&check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601=[com.alibaba.dubbo.registry.integration.RegistryProtocol$OverrideListener@b07c11]}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 15:00:55,665 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url provider://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&category=configurators&check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601, urls: [empty://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&category=configurators&check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601], dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[WARN ] 2017-12-03 15:01:50,345 method:com.alibaba.dubbo.remoting.transport.AbstractServer.disconnected(AbstractServer.java:197)
+ [DUBBO] All clients has discontected from /192.168.0.171:20884. You can graceful shutdown now., dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 15:01:50,468 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(DubboProtocol.java:130)
+ [DUBBO] disconected from /192.168.0.171:56011,url:dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&channel.readonly.sent=true&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 15:54:07,661 method:org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)
+Root WebApplicationContext: initialization started
+
+
+[INFO ] 2017-12-03 15:54:07,943 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing Root WebApplicationContext: startup date [Sun Dec 03 15:54:07 CST 2017]; root of context hierarchy
+
+
+[INFO ] 2017-12-03 15:54:08,070 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_cart_provider\mydubbo_cart_service\target\classes\spring\applicationContext-dao.xml]
+
+
+[INFO ] 2017-12-03 15:54:08,598 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_cart_provider\mydubbo_cart_service\target\classes\spring\applicationContext-redis.xml]
+
+
+[INFO ] 2017-12-03 15:54:08,644 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_cart_provider\mydubbo_cart_service\target\classes\spring\applicationContext-service.xml]
+
+
+[INFO ] 2017-12-03 15:54:08,887 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2017-12-03 15:54:08,941 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_cart_provider\mydubbo_cart_service\target\classes\spring\applicationContext-trans.xml]
+
+
+[INFO ] 2017-12-03 15:54:09,424 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from file [E:\S4\last\dubbo_work\myFileService\mydubbo_cart_provider\mydubbo_cart_service\target\classes\conf\db.properties]
+
+
+[INFO ] 2017-12-03 15:54:09,425 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from file [E:\S4\last\dubbo_work\myFileService\mydubbo_cart_provider\mydubbo_cart_service\target\classes\conf\resource.properties]
+
+
+[INFO ] 2017-12-03 15:54:09,444 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2017-12-03 15:54:12,410 method:com.alibaba.dubbo.config.spring.ServiceBean.onApplicationEvent(ServiceBean.java:107)
+ [DUBBO] The service ready on spring started. service: com.cart.service.CartService, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 15:54:12,654 method:com.alibaba.dubbo.config.ServiceConfig.exportLocal(ServiceConfig.java:510)
+ [DUBBO] Export dubbo service com.cart.service.CartService to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 15:54:12,655 method:com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:470)
+ [DUBBO] Export dubbo service com.cart.service.CartService to url dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=10436&side=provider&timeout=600000&timestamp=1512287652450, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 15:54:12,655 method:com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:481)
+ [DUBBO] Register dubbo service com.cart.service.CartService url dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=10436&side=provider&timeout=600000&timestamp=1512287652450 to registry registry://192.168.25.129:2181/com.alibaba.dubbo.registry.RegistryService?application=mydubbo_cart_p&dubbo=2.5.3&pid=10436&registry=zookeeper&timestamp=1512287652426, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 15:54:13,080 method:com.alibaba.dubbo.remoting.transport.AbstractServer.<init>(AbstractServer.java:69)
+ [DUBBO] Start NettyServer bind /0.0.0.0:20884, export /192.168.0.171:20884, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 15:54:13,129 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:232)
+ [DUBBO] Load registry store file C:\Users\Administrator\.dubbo\dubbo-registry-192.168.25.129.cache, data: {com.manager.service.TbItemService=empty://192.168.0.171/com.manager.service.TbItemService?application=mydubbo_manager_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.manager.service.TbItemService&methods=addItem,deleteItem,up,updateItem,findItemDescById,down,findAll,findItemById&pid=11120&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512126040029 empty://192.168.0.171/com.manager.service.TbItemService?application=mydubbo_manager_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.manager.service.TbItemService&methods=addItem,deleteItem,up,updateItem,findItemDescById,down,findAll,findItemById&pid=11120&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512126040029 dubbo://192.168.0.171:20880/com.manager.service.TbItemService?anyhost=true&application=mydubbo_manager_p&dubbo=2.5.3&interface=com.manager.service.TbItemService&methods=addItem,deleteItem,up,updateItem,findItemDescById,down,findAll,findItemById&pid=9472&side=provider&timeout=600000&timestamp=1512125982271, com.huarui.service.UsersService=empty://192.168.56.1:20885/com.huarui.service.UsersService?anyhost=true&application=usersService_p&category=configurators&check=false&dubbo=2.5.3&interface=com.huarui.service.UsersService&methods=findall&pid=8944&side=provider&timeout=600000&timestamp=1510282573288, com.content.service.TbContentService=empty://192.168.0.171:20881/com.content.service.TbContentService?anyhost=true&application=mydubbo_content_p&category=configurators&check=false&dubbo=2.5.3&interface=com.content.service.TbContentService&methods=deleteTbContent,addTbContent,findAll,updateTbContent,findByCategoryId&pid=5424&side=provider&timeout=600000&timestamp=1512125390731, com.cart.service.CartService=empty://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&category=configurators&check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=addCart,findItem&pid=9476&side=provider&timeout=600000&timestamp=1512268258601, com.user.service.TbUserService=empty://192.168.0.171:20883/com.user.service.TbUserService?anyhost=true&application=mydubbo_user_p&category=configurators&check=false&dubbo=2.5.3&interface=com.user.service.TbUserService&methods=addUser,toRedisByCookie,checkInfo,login&pid=9316&side=provider&timeout=600000&timestamp=1512268298174, com.content.service.TbContentCategoryService=empty://192.168.0.171:20881/com.content.service.TbContentCategoryService?anyhost=true&application=mydubbo_content_p&category=configurators&check=false&dubbo=2.5.3&interface=com.content.service.TbContentCategoryService&methods=updateTbContentCategory,findTbContentCategory,addTbContentCategory,deleteTbContentCategory&pid=5424&side=provider&timeout=600000&timestamp=1512125389899, com.manager.service.TbItemCatService=empty://192.168.0.171:20880/com.manager.service.TbItemCatService?anyhost=true&application=mydubbo_manager_p&category=configurators&check=false&dubbo=2.5.3&interface=com.manager.service.TbItemCatService&methods=findAllByPid&pid=9676&side=provider&timeout=600000&timestamp=1511855724996, com.search.service.SearchItemService=empty://192.168.0.171/com.search.service.SearchItemService?application=mydubbo_search_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.search.service.SearchItemService&methods=selectSolr,findAllItemByInputSolr&pid=9756&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512268376201 empty://192.168.0.171/com.search.service.SearchItemService?application=mydubbo_search_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.search.service.SearchItemService&methods=selectSolr,findAllItemByInputSolr&pid=9756&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512268376201 dubbo://192.168.0.171:20882/com.search.service.SearchItemService?anyhost=true&application=mydubbo_search_p&dubbo=2.5.3&interface=com.search.service.SearchItemService&methods=deleteSolr,addOrUpdateSolr,selectSolr,findAllItemByInputSolr&pid=8388&side=provider&timeout=600000&timestamp=1512268336388}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 15:54:13,179 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2017-12-03 15:54:13,200 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+
+
+[INFO ] 2017-12-03 15:54:13,202 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=PC-20161220RILH
+
+
+[INFO ] 2017-12-03 15:54:13,203 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.8.0_131
+
+
+[INFO ] 2017-12-03 15:54:13,203 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2017-12-03 15:54:13,203 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=D:\jdk\Java\jdk1.8.0_131\jre
+
+
+[INFO ] 2017-12-03 15:54:13,204 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=E:\S4\maven\maven01\apache-maven-3.3.9-bin\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar;D:\idea\IntelliJ IDEA 15.0.6\lib\idea_rt.jar
+
+
+[INFO ] 2017-12-03 15:54:13,204 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=D:\jdk\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;E:\oracle\product\10.2.0\db_1\bin;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter\Driver;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\jdk1.7(32wei)\jdk_1.7\Java\jdk1.7.0_72\bin;D:\jdk1.7(32wei)\jdk_1.7\Java\jdk1.7.0_72\jre\bin;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files (x86)\Microsoft SQL Server\80\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Program Files (x86)\Microsoft SQL Server\90\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 8\Common7\IDE\PrivateAssemblies\;D:\mysql\mysql-5.7.17-winx64\bin;D:\adt-bundle-windows-x86_64-20140702\sdk\platform-tools;C:\Program Files\TortoiseSVN\bin;D:\git\Git\cmd;E:\S4\maven\maven01\apache-maven-3.3.9-bin\apache-maven-3.3.9\bin;;.
+
+
+[INFO ] 2017-12-03 15:54:13,204 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+
+
+[INFO ] 2017-12-03 15:54:13,205 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2017-12-03 15:54:13,205 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Windows 7
+
+
+[INFO ] 2017-12-03 15:54:13,205 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=amd64
+
+
+[INFO ] 2017-12-03 15:54:13,205 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=6.1
+
+
+[INFO ] 2017-12-03 15:54:13,206 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=Administrator
+
+
+[INFO ] 2017-12-03 15:54:13,206 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=C:\Users\Administrator
+
+
+[INFO ] 2017-12-03 15:54:13,206 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=E:\S4\last\dubbo_work\myFileService\mydubbo_cart_provider
+
+
+[INFO ] 2017-12-03 15:54:13,209 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.25.129:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@11dd0dde
+
+
+[INFO ] 2017-12-03 15:54:13,293 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.129/192.168.25.129:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2017-12-03 15:54:13,298 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.25.129/192.168.25.129:2181, initiating session
+
+
+[INFO ] 2017-12-03 15:54:13,394 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.25.129/192.168.25.129:2181, sessionid = 0x1601be6b332001a, negotiated timeout = 30000
+
+
+[INFO ] 2017-12-03 15:54:13,398 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2017-12-03 15:54:13,401 method:com.alibaba.dubbo.registry.support.AbstractRegistry.register(AbstractRegistry.java:302)
+ [DUBBO] Register: dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=10436&side=provider&timeout=600000&timestamp=1512287652450, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 15:54:13,447 method:com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(AbstractRegistry.java:325)
+ [DUBBO] Subscribe: provider://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&category=configurators&check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=10436&side=provider&timeout=600000&timestamp=1512287652450, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 15:54:13,477 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url provider://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&category=configurators&check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=10436&side=provider&timeout=600000&timestamp=1512287652450, urls: [empty://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&category=configurators&check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=10436&side=provider&timeout=600000&timestamp=1512287652450], dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 15:54:13,533 method:org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:347)
+Root WebApplicationContext: initialization completed in 5853 ms
+
+
+[INFO ] 2017-12-03 15:57:29,158 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:655)
+{dataSource-1} inited
+
+
+[WARN ] 2017-12-03 15:59:18,845 method:com.alibaba.dubbo.remoting.transport.AbstractServer.disconnected(AbstractServer.java:197)
+ [DUBBO] All clients has discontected from /192.168.0.171:20884. You can graceful shutdown now., dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 15:59:18,846 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(DubboProtocol.java:130)
+ [DUBBO] disconected from /192.168.0.171:58354,url:dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&channel.readonly.sent=true&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=10436&side=provider&timeout=600000&timestamp=1512287652450, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[ERROR] 2017-12-03 16:02:47,178 method:com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:87)
+ [DUBBO] Got unchecked and undeclared exception which called by 192.168.0.171. service: com.cart.service.CartService, method: delCartAll, exception: redis.clients.jedis.exceptions.JedisDataException: ERR wrong number of arguments for 'hdel' command, dubbo version: 2.5.3, current host: 127.0.0.1
+redis.clients.jedis.exceptions.JedisDataException: ERR wrong number of arguments for 'hdel' command
+	at redis.clients.jedis.Protocol.processError(Protocol.java:117)
+	at redis.clients.jedis.Protocol.process(Protocol.java:142)
+	at redis.clients.jedis.Protocol.read(Protocol.java:196)
+	at redis.clients.jedis.Connection.readProtocolWithCheckingBroken(Connection.java:288)
+	at redis.clients.jedis.Connection.getIntegerReply(Connection.java:213)
+	at redis.clients.jedis.Jedis.hdel(Jedis.java:726)
+	at redis.clients.jedis.JedisCluster$34.execute(JedisCluster.java:404)
+	at redis.clients.jedis.JedisCluster$34.execute(JedisCluster.java:401)
+	at redis.clients.jedis.JedisClusterCommand.runWithRetries(JedisClusterCommand.java:56)
+	at redis.clients.jedis.JedisClusterCommand.run(JedisClusterCommand.java:29)
+	at redis.clients.jedis.JedisCluster.hdel(JedisCluster.java:401)
+	at com.cart.service.impl.CartServiceImpl.delCartAll(CartServiceImpl.java:61)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:302)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:157)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:99)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:281)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:96)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:92)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:208)
+	at com.sun.proxy.$Proxy35.delCartAll(Unknown Source)
+	at com.alibaba.dubbo.common.bytecode.Wrapper0.invokeMethod(Wrapper0.java)
+	at com.alibaba.dubbo.rpc.proxy.javassist.JavassistProxyFactory$1.doInvoke(JavassistProxyFactory.java:46)
+	at com.alibaba.dubbo.rpc.proxy.AbstractProxyInvoker.invoke(AbstractProxyInvoker.java:72)
+	at com.alibaba.dubbo.rpc.protocol.InvokerWrapper.invoke(InvokerWrapper.java:53)
+	at com.alibaba.dubbo.rpc.filter.ExceptionFilter.invoke(ExceptionFilter.java:64)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.monitor.support.MonitorFilter.invoke(MonitorFilter.java:75)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.TimeoutFilter.invoke(TimeoutFilter.java:42)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.filter.TraceFilter.invoke(TraceFilter.java:78)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ContextFilter.invoke(ContextFilter.java:60)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.GenericFilter.invoke(GenericFilter.java:112)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.ClassLoaderFilter.invoke(ClassLoaderFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.filter.EchoFilter.invoke(EchoFilter.java:38)
+	at com.alibaba.dubbo.rpc.protocol.ProtocolFilterWrapper$1.invoke(ProtocolFilterWrapper.java:91)
+	at com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.reply(DubboProtocol.java:108)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.handleRequest(HeaderExchangeHandler.java:84)
+	at com.alibaba.dubbo.remoting.exchange.support.header.HeaderExchangeHandler.received(HeaderExchangeHandler.java:170)
+	at com.alibaba.dubbo.remoting.transport.DecodeHandler.received(DecodeHandler.java:52)
+	at com.alibaba.dubbo.remoting.transport.dispatcher.ChannelEventRunnable.run(ChannelEventRunnable.java:82)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+[WARN ] 2017-12-03 16:04:20,545 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1108)
+Client session timed out, have not heard from server in 20000ms for sessionid 0x1601be6b332001a
+
+
+[INFO ] 2017-12-03 16:04:20,546 method:org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1156)
+Client session timed out, have not heard from server in 20000ms for sessionid 0x1601be6b332001a, closing socket connection and attempting reconnect
+
+
+[INFO ] 2017-12-03 16:04:20,647 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (Disconnected)
+
+
+[INFO ] 2017-12-03 16:04:22,552 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.129/192.168.25.129:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2017-12-03 16:04:22,554 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.25.129/192.168.25.129:2181, initiating session
+
+
+[INFO ] 2017-12-03 16:04:22,563 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.25.129/192.168.25.129:2181, sessionid = 0x1601be6b332001a, negotiated timeout = 30000
+
+
+[INFO ] 2017-12-03 16:04:22,564 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2017-12-03 16:10:44,793 method:org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)
+Root WebApplicationContext: initialization started
+
+
+[INFO ] 2017-12-03 16:10:45,019 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing Root WebApplicationContext: startup date [Sun Dec 03 16:10:45 CST 2017]; root of context hierarchy
+
+
+[INFO ] 2017-12-03 16:10:45,113 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_cart_provider\mydubbo_cart_service\target\classes\spring\applicationContext-dao.xml]
+
+
+[INFO ] 2017-12-03 16:10:45,406 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_cart_provider\mydubbo_cart_service\target\classes\spring\applicationContext-redis.xml]
+
+
+[INFO ] 2017-12-03 16:10:45,548 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_cart_provider\mydubbo_cart_service\target\classes\spring\applicationContext-service.xml]
+
+
+[INFO ] 2017-12-03 16:10:45,767 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2017-12-03 16:10:45,825 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_cart_provider\mydubbo_cart_service\target\classes\spring\applicationContext-trans.xml]
+
+
+[INFO ] 2017-12-03 16:10:46,258 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from file [E:\S4\last\dubbo_work\myFileService\mydubbo_cart_provider\mydubbo_cart_service\target\classes\conf\db.properties]
+
+
+[INFO ] 2017-12-03 16:10:46,258 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from file [E:\S4\last\dubbo_work\myFileService\mydubbo_cart_provider\mydubbo_cart_service\target\classes\conf\resource.properties]
+
+
+[INFO ] 2017-12-03 16:10:46,282 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2017-12-03 16:10:48,579 method:com.alibaba.dubbo.config.spring.ServiceBean.onApplicationEvent(ServiceBean.java:107)
+ [DUBBO] The service ready on spring started. service: com.cart.service.CartService, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 16:10:48,798 method:com.alibaba.dubbo.config.ServiceConfig.exportLocal(ServiceConfig.java:510)
+ [DUBBO] Export dubbo service com.cart.service.CartService to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 16:10:48,799 method:com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:470)
+ [DUBBO] Export dubbo service com.cart.service.CartService to url dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=15268&side=provider&timeout=600000&timestamp=1512288648620, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 16:10:48,800 method:com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:481)
+ [DUBBO] Register dubbo service com.cart.service.CartService url dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=15268&side=provider&timeout=600000&timestamp=1512288648620 to registry registry://192.168.25.129:2181/com.alibaba.dubbo.registry.RegistryService?application=mydubbo_cart_p&dubbo=2.5.3&pid=15268&registry=zookeeper&timestamp=1512288648596, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 16:10:49,159 method:com.alibaba.dubbo.remoting.transport.AbstractServer.<init>(AbstractServer.java:69)
+ [DUBBO] Start NettyServer bind /0.0.0.0:20884, export /192.168.0.171:20884, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 16:10:49,200 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:232)
+ [DUBBO] Load registry store file C:\Users\Administrator\.dubbo\dubbo-registry-192.168.25.129.cache, data: {com.manager.service.TbItemService=empty://192.168.0.171/com.manager.service.TbItemService?application=mydubbo_manager_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.manager.service.TbItemService&methods=addItem,deleteItem,up,updateItem,findItemDescById,down,findAll,findItemById&pid=11120&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512126040029 empty://192.168.0.171/com.manager.service.TbItemService?application=mydubbo_manager_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.manager.service.TbItemService&methods=addItem,deleteItem,up,updateItem,findItemDescById,down,findAll,findItemById&pid=11120&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512126040029 dubbo://192.168.0.171:20880/com.manager.service.TbItemService?anyhost=true&application=mydubbo_manager_p&dubbo=2.5.3&interface=com.manager.service.TbItemService&methods=addItem,deleteItem,up,updateItem,findItemDescById,down,findAll,findItemById&pid=9472&side=provider&timeout=600000&timestamp=1512125982271, com.huarui.service.UsersService=empty://192.168.56.1:20885/com.huarui.service.UsersService?anyhost=true&application=usersService_p&category=configurators&check=false&dubbo=2.5.3&interface=com.huarui.service.UsersService&methods=findall&pid=8944&side=provider&timeout=600000&timestamp=1510282573288, com.content.service.TbContentService=empty://192.168.0.171:20881/com.content.service.TbContentService?anyhost=true&application=mydubbo_content_p&category=configurators&check=false&dubbo=2.5.3&interface=com.content.service.TbContentService&methods=deleteTbContent,addTbContent,findAll,updateTbContent,findByCategoryId&pid=5424&side=provider&timeout=600000&timestamp=1512125390731, com.cart.service.CartService=empty://192.168.0.171/com.cart.service.CartService?application=mydubbo_cart_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=10744&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512287992422 empty://192.168.0.171/com.cart.service.CartService?application=mydubbo_cart_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=10744&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512287992422 empty://192.168.0.171/com.cart.service.CartService?application=mydubbo_cart_web&category=providers&default.check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=10744&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512287992422, com.user.service.TbUserService=empty://192.168.0.171/com.user.service.TbUserService?application=mydubbo_cart_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.user.service.TbUserService&methods=addUser,toRedisByCookie,checkInfo,login&pid=10744&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512287993405 empty://192.168.0.171/com.user.service.TbUserService?application=mydubbo_cart_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.user.service.TbUserService&methods=addUser,toRedisByCookie,checkInfo,login&pid=10744&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512287993405 dubbo://192.168.0.171:20883/com.user.service.TbUserService?anyhost=true&application=mydubbo_user_p&dubbo=2.5.3&interface=com.user.service.TbUserService&methods=addUser,toRedisByCookie,checkInfo,login&pid=9316&side=provider&timeout=600000&timestamp=1512268298174, com.content.service.TbContentCategoryService=empty://192.168.0.171:20881/com.content.service.TbContentCategoryService?anyhost=true&application=mydubbo_content_p&category=configurators&check=false&dubbo=2.5.3&interface=com.content.service.TbContentCategoryService&methods=updateTbContentCategory,findTbContentCategory,addTbContentCategory,deleteTbContentCategory&pid=5424&side=provider&timeout=600000&timestamp=1512125389899, com.manager.service.TbItemCatService=empty://192.168.0.171:20880/com.manager.service.TbItemCatService?anyhost=true&application=mydubbo_manager_p&category=configurators&check=false&dubbo=2.5.3&interface=com.manager.service.TbItemCatService&methods=findAllByPid&pid=9676&side=provider&timeout=600000&timestamp=1511855724996, com.search.service.SearchItemService=empty://192.168.0.171/com.search.service.SearchItemService?application=mydubbo_search_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.search.service.SearchItemService&methods=selectSolr,findAllItemByInputSolr&pid=9756&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512268376201 empty://192.168.0.171/com.search.service.SearchItemService?application=mydubbo_search_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.search.service.SearchItemService&methods=selectSolr,findAllItemByInputSolr&pid=9756&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512268376201 dubbo://192.168.0.171:20882/com.search.service.SearchItemService?anyhost=true&application=mydubbo_search_p&dubbo=2.5.3&interface=com.search.service.SearchItemService&methods=deleteSolr,addOrUpdateSolr,selectSolr,findAllItemByInputSolr&pid=8388&side=provider&timeout=600000&timestamp=1512268336388}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 16:10:49,232 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2017-12-03 16:10:49,252 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+
+
+[INFO ] 2017-12-03 16:10:49,254 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=PC-20161220RILH
+
+
+[INFO ] 2017-12-03 16:10:49,254 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.8.0_131
+
+
+[INFO ] 2017-12-03 16:10:49,255 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2017-12-03 16:10:49,256 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=D:\jdk\Java\jdk1.8.0_131\jre
+
+
+[INFO ] 2017-12-03 16:10:49,257 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=E:\S4\maven\maven01\apache-maven-3.3.9-bin\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar;D:\idea\IntelliJ IDEA 15.0.6\lib\idea_rt.jar
+
+
+[INFO ] 2017-12-03 16:10:49,257 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=D:\jdk\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;E:\oracle\product\10.2.0\db_1\bin;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter\Driver;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\jdk1.7(32wei)\jdk_1.7\Java\jdk1.7.0_72\bin;D:\jdk1.7(32wei)\jdk_1.7\Java\jdk1.7.0_72\jre\bin;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files (x86)\Microsoft SQL Server\80\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Program Files (x86)\Microsoft SQL Server\90\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 8\Common7\IDE\PrivateAssemblies\;D:\mysql\mysql-5.7.17-winx64\bin;D:\adt-bundle-windows-x86_64-20140702\sdk\platform-tools;C:\Program Files\TortoiseSVN\bin;D:\git\Git\cmd;E:\S4\maven\maven01\apache-maven-3.3.9-bin\apache-maven-3.3.9\bin;;.
+
+
+[INFO ] 2017-12-03 16:10:49,257 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+
+
+[INFO ] 2017-12-03 16:10:49,258 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2017-12-03 16:10:49,258 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Windows 7
+
+
+[INFO ] 2017-12-03 16:10:49,259 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=amd64
+
+
+[INFO ] 2017-12-03 16:10:49,259 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=6.1
+
+
+[INFO ] 2017-12-03 16:10:49,260 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=Administrator
+
+
+[INFO ] 2017-12-03 16:10:49,260 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=C:\Users\Administrator
+
+
+[INFO ] 2017-12-03 16:10:49,261 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=E:\S4\last\dubbo_work\myFileService\mydubbo_cart_provider
+
+
+[INFO ] 2017-12-03 16:10:49,263 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.25.129:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@260aa173
+
+
+[INFO ] 2017-12-03 16:10:49,306 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.129/192.168.25.129:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2017-12-03 16:10:49,309 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.25.129/192.168.25.129:2181, initiating session
+
+
+[INFO ] 2017-12-03 16:10:49,369 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.25.129/192.168.25.129:2181, sessionid = 0x1601be6b332001d, negotiated timeout = 30000
+
+
+[INFO ] 2017-12-03 16:10:49,373 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2017-12-03 16:10:49,377 method:com.alibaba.dubbo.registry.support.AbstractRegistry.register(AbstractRegistry.java:302)
+ [DUBBO] Register: dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=15268&side=provider&timeout=600000&timestamp=1512288648620, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 16:10:49,446 method:com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(AbstractRegistry.java:325)
+ [DUBBO] Subscribe: provider://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&category=configurators&check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=15268&side=provider&timeout=600000&timestamp=1512288648620, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 16:10:49,622 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url provider://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&category=configurators&check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=15268&side=provider&timeout=600000&timestamp=1512288648620, urls: [empty://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&category=configurators&check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=15268&side=provider&timeout=600000&timestamp=1512288648620], dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 16:10:49,677 method:org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:347)
+Root WebApplicationContext: initialization completed in 4879 ms
+
+
+[INFO ] 2017-12-03 16:11:06,263 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:655)
+{dataSource-1} inited
+
+
+[WARN ] 2017-12-03 16:57:33,336 method:com.alibaba.dubbo.remoting.transport.AbstractServer.disconnected(AbstractServer.java:197)
+ [DUBBO] All clients has discontected from /192.168.0.171:20884. You can graceful shutdown now., dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 16:57:33,339 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(DubboProtocol.java:130)
+ [DUBBO] disconected from /192.168.0.171:59553,url:dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&channel.readonly.sent=true&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=15268&side=provider&timeout=600000&timestamp=1512288648620, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[WARN ] 2017-12-03 16:59:20,218 method:com.alibaba.dubbo.remoting.transport.AbstractServer.disconnected(AbstractServer.java:197)
+ [DUBBO] All clients has discontected from /192.168.0.171:20884. You can graceful shutdown now., dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-03 16:59:20,234 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(DubboProtocol.java:130)
+ [DUBBO] disconected from /192.168.0.171:61969,url:dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&channel.readonly.sent=true&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=15268&side=provider&timeout=600000&timestamp=1512288648620, dubbo version: 2.5.3, current host: 127.0.0.1
