@@ -1,0 +1,864 @@
+
+
+[INFO ] 2017-12-05 16:33:36,551 method:org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)
+Root WebApplicationContext: initialization started
+
+
+[INFO ] 2017-12-05 16:33:36,805 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing Root WebApplicationContext: startup date [Tue Dec 05 16:33:36 CST 2017]; root of context hierarchy
+
+
+[INFO ] 2017-12-05 16:33:36,908 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider\mydubbo_pay_service\target\classes\spring\applicationContext-dao.xml]
+
+
+[INFO ] 2017-12-05 16:33:37,272 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider\mydubbo_pay_service\target\classes\spring\applicationContext-redis.xml]
+
+
+[INFO ] 2017-12-05 16:33:37,312 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider\mydubbo_pay_service\target\classes\spring\applicationContext-service.xml]
+
+
+[INFO ] 2017-12-05 16:33:37,510 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2017-12-05 16:33:37,566 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider\mydubbo_pay_service\target\classes\spring\applicationContext-trans.xml]
+
+
+[INFO ] 2017-12-05 16:33:37,996 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from file [E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider\mydubbo_pay_service\target\classes\conf\db.properties]
+
+
+[INFO ] 2017-12-05 16:33:37,997 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from file [E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider\mydubbo_pay_service\target\classes\conf\resource.properties]
+
+
+[INFO ] 2017-12-05 16:33:38,017 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2017-12-05 16:33:51,445 method:com.alipay.demo.trade.config.Configs.init(Configs.java:78)
+配置文件名: zfbinfo.properties
+
+
+[INFO ] 2017-12-05 16:33:51,446 method:com.alipay.demo.trade.config.Configs.init(Configs.java:79)
+Configs{支付宝openapi网关: https://openapi.alipaydev.com/gateway.do
+, 支付宝mcloudapi网关域名: http://mcloudmonitor.com/gateway.do
+, pid: 2088102173262800
+, appid: 2016082700325200
+, 商户RSA私钥: MIIEvg******S+JEHo
+, 商户RSA公钥: MIIBIj******IDAQAB
+, 支付宝RSA公钥: MIIBIj******IDAQAB
+, 签名类型: RSA2
+, 查询重试次数: 5
+, 查询间隔(毫秒): 5000
+, 撤销尝试次数: 3
+, 撤销重试间隔(毫秒): 2000
+, 交易保障调度延迟(秒): 5
+, 交易保障调度间隔(秒): 900
+}
+
+
+[INFO ] 2017-12-05 16:33:53,347 method:com.alibaba.dubbo.config.spring.ServiceBean.onApplicationEvent(ServiceBean.java:107)
+ [DUBBO] The service ready on spring started. service: com.pay.service.PayService, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-05 16:33:53,592 method:com.alibaba.dubbo.config.ServiceConfig.exportLocal(ServiceConfig.java:510)
+ [DUBBO] Export dubbo service com.pay.service.PayService to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-05 16:33:53,592 method:com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:470)
+ [DUBBO] Export dubbo service com.pay.service.PayService to url dubbo://192.168.0.171:20886/com.pay.service.PayService?anyhost=true&application=mydubbo_pay_p&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder&pid=8936&side=provider&timeout=600000&timestamp=1512462833390, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-05 16:33:53,593 method:com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:481)
+ [DUBBO] Register dubbo service com.pay.service.PayService url dubbo://192.168.0.171:20886/com.pay.service.PayService?anyhost=true&application=mydubbo_pay_p&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder&pid=8936&side=provider&timeout=600000&timestamp=1512462833390 to registry registry://192.168.25.129:2181/com.alibaba.dubbo.registry.RegistryService?application=mydubbo_pay_p&dubbo=2.5.3&pid=8936&registry=zookeeper&timestamp=1512462833363, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-05 16:33:54,103 method:com.alibaba.dubbo.remoting.transport.AbstractServer.<init>(AbstractServer.java:69)
+ [DUBBO] Start NettyServer bind /0.0.0.0:20886, export /192.168.0.171:20886, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-05 16:33:54,197 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:232)
+ [DUBBO] Load registry store file C:\Users\Administrator\.dubbo\dubbo-registry-192.168.25.129.cache, data: {com.manager.service.TbItemService=empty://192.168.0.171/com.manager.service.TbItemService?application=mydubbo_manager_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.manager.service.TbItemService&methods=addItem,deleteItem,up,updateItem,findItemDescById,down,findAll,findItemById&pid=11552&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512289192882 empty://192.168.0.171/com.manager.service.TbItemService?application=mydubbo_manager_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.manager.service.TbItemService&methods=addItem,deleteItem,up,updateItem,findItemDescById,down,findAll,findItemById&pid=11552&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512289192882 dubbo://192.168.0.171:20880/com.manager.service.TbItemService?anyhost=true&application=mydubbo_manager_p&dubbo=2.5.3&interface=com.manager.service.TbItemService&methods=addItem,deleteItem,up,updateItem,findItemDescById,down,findAll,findItemById&pid=7860&side=provider&timeout=600000&timestamp=1512268939163, com.huarui.service.UsersService=empty://192.168.56.1:20885/com.huarui.service.UsersService?anyhost=true&application=usersService_p&category=configurators&check=false&dubbo=2.5.3&interface=com.huarui.service.UsersService&methods=findall&pid=8944&side=provider&timeout=600000&timestamp=1510282573288, com.content.service.TbContentService=empty://192.168.0.171:20881/com.content.service.TbContentService?anyhost=true&application=mydubbo_content_p&category=configurators&check=false&dubbo=2.5.3&interface=com.content.service.TbContentService&methods=deleteTbContent,addTbContent,findAll,updateTbContent,findByCategoryId&pid=5424&side=provider&timeout=600000&timestamp=1512125390731, com.cart.service.CartService=empty://192.168.0.171/com.cart.service.CartService?application=mydubbo_cart_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=17424&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512291592336 empty://192.168.0.171/com.cart.service.CartService?application=mydubbo_cart_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=17424&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512291592336 dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=15268&side=provider&timeout=600000&timestamp=1512288648620, com.user.service.TbUserService=empty://192.168.0.171/com.user.service.TbUserService?application=mydubbo_cart_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.user.service.TbUserService&methods=addUser,toRedisByCookie,checkInfo,login&pid=17424&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512291593424 empty://192.168.0.171/com.user.service.TbUserService?application=mydubbo_cart_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.user.service.TbUserService&methods=addUser,toRedisByCookie,checkInfo,login&pid=17424&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512291593424 dubbo://192.168.0.171:20883/com.user.service.TbUserService?anyhost=true&application=mydubbo_user_p&dubbo=2.5.3&interface=com.user.service.TbUserService&methods=addUser,toRedisByCookie,checkInfo,login&pid=9316&side=provider&timeout=600000&timestamp=1512268298174, com.content.service.TbContentCategoryService=empty://192.168.0.171:20881/com.content.service.TbContentCategoryService?anyhost=true&application=mydubbo_content_p&category=configurators&check=false&dubbo=2.5.3&interface=com.content.service.TbContentCategoryService&methods=updateTbContentCategory,findTbContentCategory,addTbContentCategory,deleteTbContentCategory&pid=5424&side=provider&timeout=600000&timestamp=1512125389899, com.manager.service.TbItemCatService=empty://192.168.0.171:20880/com.manager.service.TbItemCatService?anyhost=true&application=mydubbo_manager_p&category=configurators&check=false&dubbo=2.5.3&interface=com.manager.service.TbItemCatService&methods=findAllByPid&pid=9676&side=provider&timeout=600000&timestamp=1511855724996, com.search.service.SearchItemService=empty://192.168.0.171/com.search.service.SearchItemService?application=mydubbo_search_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.search.service.SearchItemService&methods=selectSolr,findAllItemByInputSolr&pid=9756&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512268376201 empty://192.168.0.171/com.search.service.SearchItemService?application=mydubbo_search_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.search.service.SearchItemService&methods=selectSolr,findAllItemByInputSolr&pid=9756&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512268376201 dubbo://192.168.0.171:20882/com.search.service.SearchItemService?anyhost=true&application=mydubbo_search_p&dubbo=2.5.3&interface=com.search.service.SearchItemService&methods=deleteSolr,addOrUpdateSolr,selectSolr,findAllItemByInputSolr&pid=8388&side=provider&timeout=600000&timestamp=1512268336388}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-05 16:33:54,230 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2017-12-05 16:33:54,268 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+
+
+[INFO ] 2017-12-05 16:33:54,269 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=PC-20161220RILH
+
+
+[INFO ] 2017-12-05 16:33:54,269 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.8.0_131
+
+
+[INFO ] 2017-12-05 16:33:54,269 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2017-12-05 16:33:54,270 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=D:\jdk\Java\jdk1.8.0_131\jre
+
+
+[INFO ] 2017-12-05 16:33:54,270 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=E:\S4\maven\maven01\apache-maven-3.3.9-bin\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar;D:\idea\IntelliJ IDEA 15.0.6\lib\idea_rt.jar
+
+
+[INFO ] 2017-12-05 16:33:54,270 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=D:\jdk\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;E:\oracle\product\10.2.0\db_1\bin;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter\Driver;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\jdk1.7(32wei)\jdk_1.7\Java\jdk1.7.0_72\bin;D:\jdk1.7(32wei)\jdk_1.7\Java\jdk1.7.0_72\jre\bin;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files (x86)\Microsoft SQL Server\80\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Program Files (x86)\Microsoft SQL Server\90\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 8\Common7\IDE\PrivateAssemblies\;D:\mysql\mysql-5.7.17-winx64\bin;D:\adt-bundle-windows-x86_64-20140702\sdk\platform-tools;C:\Program Files\TortoiseSVN\bin;D:\git\Git\cmd;E:\S4\maven\maven01\apache-maven-3.3.9-bin\apache-maven-3.3.9\bin;;.
+
+
+[INFO ] 2017-12-05 16:33:54,271 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+
+
+[INFO ] 2017-12-05 16:33:54,271 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2017-12-05 16:33:54,271 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Windows 7
+
+
+[INFO ] 2017-12-05 16:33:54,271 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=amd64
+
+
+[INFO ] 2017-12-05 16:33:54,272 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=6.1
+
+
+[INFO ] 2017-12-05 16:33:54,272 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=Administrator
+
+
+[INFO ] 2017-12-05 16:33:54,272 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=C:\Users\Administrator
+
+
+[INFO ] 2017-12-05 16:33:54,272 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider
+
+
+[INFO ] 2017-12-05 16:33:54,274 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.25.129:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@6c9104b6
+
+
+[INFO ] 2017-12-05 16:33:54,365 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.129/192.168.25.129:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2017-12-05 16:33:54,368 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.25.129/192.168.25.129:2181, initiating session
+
+
+[INFO ] 2017-12-05 16:33:54,382 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.25.129/192.168.25.129:2181, sessionid = 0x1601be6b3320021, negotiated timeout = 30000
+
+
+[INFO ] 2017-12-05 16:33:54,386 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2017-12-05 16:33:54,391 method:com.alibaba.dubbo.registry.support.AbstractRegistry.register(AbstractRegistry.java:302)
+ [DUBBO] Register: dubbo://192.168.0.171:20886/com.pay.service.PayService?anyhost=true&application=mydubbo_pay_p&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder&pid=8936&side=provider&timeout=600000&timestamp=1512462833390, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-05 16:33:54,446 method:com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(AbstractRegistry.java:325)
+ [DUBBO] Subscribe: provider://192.168.0.171:20886/com.pay.service.PayService?anyhost=true&application=mydubbo_pay_p&category=configurators&check=false&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder&pid=8936&side=provider&timeout=600000&timestamp=1512462833390, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-05 16:33:54,491 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url provider://192.168.0.171:20886/com.pay.service.PayService?anyhost=true&application=mydubbo_pay_p&category=configurators&check=false&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder&pid=8936&side=provider&timeout=600000&timestamp=1512462833390, urls: [empty://192.168.0.171:20886/com.pay.service.PayService?anyhost=true&application=mydubbo_pay_p&category=configurators&check=false&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder&pid=8936&side=provider&timeout=600000&timestamp=1512462833390], dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-05 16:33:54,554 method:org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:347)
+Root WebApplicationContext: initialization completed in 17998 ms
+
+
+[INFO ] 2017-12-05 16:37:00,619 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:655)
+{dataSource-1} inited
+
+
+[WARN ] 2017-12-05 16:37:58,810 method:com.alibaba.dubbo.remoting.transport.AbstractServer.disconnected(AbstractServer.java:197)
+ [DUBBO] All clients has discontected from /192.168.0.171:20886. You can graceful shutdown now., dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-05 16:37:58,812 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(DubboProtocol.java:130)
+ [DUBBO] disconected from /192.168.0.171:52349,url:dubbo://192.168.0.171:20886/com.pay.service.PayService?anyhost=true&application=mydubbo_pay_p&channel.readonly.sent=true&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.pay.service.PayService&methods=createOrder&pid=8936&side=provider&timeout=600000&timestamp=1512462833390, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-05 16:38:44,522 method:com.alipay.demo.trade.service.impl.AbsAlipayTradeService.tradePrecreate(AbsAlipayTradeService.java:100)
+trade.precreate bizContent:{"out_trade_no":"10000","seller_id":"","total_amount":"100","undiscountable_amount":"0","subject":"华瑞商城：扫码支付【10000】","body":"购买商品*件共100元","goods_detail":[{"goods_id":"102","goods_name":"mysql","quantity":1,"price":"0.5"},{"goods_id":"101","goods_name":"java","quantity":1,"price":"0.5"}],"operator_id":"test_operator_id","store_id":"test_store_id","extend_params":{"sys_service_provider_id":"2088100200300400500"},"timeout_express":"120m"}
+
+
+[INFO ] 2017-12-05 16:38:45,886 method:com.alipay.demo.trade.service.impl.AbsAlipayService.getResponse(AbsAlipayService.java:34)
+{"alipay_trade_precreate_response":{"code":"10000","msg":"Success","out_trade_no":"10000","qr_code":"https:\/\/qr.alipay.com\/bax05360vllqc51m76wt0090"},"sign":"kouycmIaJmoVHOCaDRw4ZlOTdN64SZ0iKMPUlfo3UNaDS+SyIwRCDY0EP9Aao1SQlqFVBdYcUmQ89AjWleiGIENarQk1wDVxcuZ4htC6ezbs9iRhO1TCkKF+HnMSLfDvXQjUgxkTrEPiU2HlfkVjQe7sbaG/7U5CaFGRgidu4iWZAsyPlieVblUK7KwIye4sh7MGrx1NptknWeJJalR8Eeoha6kpr9MpyXCFUzTGQa7jNgZ8+VlWpJymZ9LjFLN4KxB9tpcAW6l+2mQHkkNCfpCr186eNi37kR0dBhp9f3HVFSgsO7ztcilWTOpKg6Xz4W5u9J3+U8+9/5HcNF1tIw=="}
+
+
+[INFO ] 2017-12-05 16:38:45,892 method:com.pay.service.impl.PayServiceImpl.createOrder(PayServiceImpl.java:139)
+支付宝预下单成功: )
+
+
+[INFO ] 2017-12-05 16:38:45,894 method:com.pay.service.impl.PayServiceImpl.dumpResponse(PayServiceImpl.java:182)
+code:10000, msg:Success
+
+
+[INFO ] 2017-12-05 16:38:45,895 method:com.pay.service.impl.PayServiceImpl.dumpResponse(PayServiceImpl.java:187)
+body:{"alipay_trade_precreate_response":{"code":"10000","msg":"Success","out_trade_no":"10000","qr_code":"https:\/\/qr.alipay.com\/bax05360vllqc51m76wt0090"},"sign":"kouycmIaJmoVHOCaDRw4ZlOTdN64SZ0iKMPUlfo3UNaDS+SyIwRCDY0EP9Aao1SQlqFVBdYcUmQ89AjWleiGIENarQk1wDVxcuZ4htC6ezbs9iRhO1TCkKF+HnMSLfDvXQjUgxkTrEPiU2HlfkVjQe7sbaG/7U5CaFGRgidu4iWZAsyPlieVblUK7KwIye4sh7MGrx1NptknWeJJalR8Eeoha6kpr9MpyXCFUzTGQa7jNgZ8+VlWpJymZ9LjFLN4KxB9tpcAW6l+2mQHkkNCfpCr186eNi37kR0dBhp9f3HVFSgsO7ztcilWTOpKg6Xz4W5u9J3+U8+9/5HcNF1tIw=="}
+
+
+[INFO ] 2017-12-05 16:38:45,896 method:com.pay.service.impl.PayServiceImpl.createOrder(PayServiceImpl.java:147)
+filePath:D:\MyWork\images\qr-10000.png
+
+
+[INFO ] 2017-12-05 16:43:20,650 method:com.alipay.demo.trade.service.impl.AbsAlipayTradeService.tradePrecreate(AbsAlipayTradeService.java:100)
+trade.precreate bizContent:{"out_trade_no":"10000","seller_id":"","total_amount":"100","undiscountable_amount":"0","subject":"华瑞商城：扫码支付【10000】","body":"购买商品*件共100元","goods_detail":[{"goods_id":"102","goods_name":"mysql","quantity":1,"price":"0.5"},{"goods_id":"101","goods_name":"java","quantity":1,"price":"0.5"}],"operator_id":"test_operator_id","store_id":"test_store_id","extend_params":{"sys_service_provider_id":"2088100200300400500"},"timeout_express":"120m"}
+
+
+[INFO ] 2017-12-05 16:43:21,370 method:com.alipay.demo.trade.service.impl.AbsAlipayService.getResponse(AbsAlipayService.java:34)
+{"alipay_trade_precreate_response":{"code":"10000","msg":"Success","out_trade_no":"10000","qr_code":"https:\/\/qr.alipay.com\/bax01068aglha9ixpvjb0005"},"sign":"MQP7RNBHBkxIOMaxwjVD+osrJpUoByvjOL6bwWK7pjM1ybP4C5Mlo1yTPhoRGPf+kN2gQPu65nzA3CHULLwt+YD8RvpIUVlXpkzkVqAF4cm2q5dVPvCkka8mbinh++1L6OXjgqMliK2QIrv+8zzTKS2B+eXjU+qXp2Xz37tc54a/1Dse1zqolaRd8FcH7D8pHZX0Yq9DxiVFIeBR1d1ap2SZmZX695r6JiNXPM5BrjCzwJ5gblq3bghwPh17Mn+xpkdTTt6TptN5ed14zCSXP/BCyrZ/mI3SOXLR7ewm9Q9M8ha17G+ZCvj270mVnW5+n93p3kBWbKJincdwSz9KOw=="}
+
+
+[INFO ] 2017-12-05 16:43:21,371 method:com.pay.service.impl.PayServiceImpl.createOrder(PayServiceImpl.java:139)
+支付宝预下单成功: )
+
+
+[INFO ] 2017-12-05 16:43:21,373 method:com.pay.service.impl.PayServiceImpl.dumpResponse(PayServiceImpl.java:182)
+code:10000, msg:Success
+
+
+[INFO ] 2017-12-05 16:43:21,374 method:com.pay.service.impl.PayServiceImpl.dumpResponse(PayServiceImpl.java:187)
+body:{"alipay_trade_precreate_response":{"code":"10000","msg":"Success","out_trade_no":"10000","qr_code":"https:\/\/qr.alipay.com\/bax01068aglha9ixpvjb0005"},"sign":"MQP7RNBHBkxIOMaxwjVD+osrJpUoByvjOL6bwWK7pjM1ybP4C5Mlo1yTPhoRGPf+kN2gQPu65nzA3CHULLwt+YD8RvpIUVlXpkzkVqAF4cm2q5dVPvCkka8mbinh++1L6OXjgqMliK2QIrv+8zzTKS2B+eXjU+qXp2Xz37tc54a/1Dse1zqolaRd8FcH7D8pHZX0Yq9DxiVFIeBR1d1ap2SZmZX695r6JiNXPM5BrjCzwJ5gblq3bghwPh17Mn+xpkdTTt6TptN5ed14zCSXP/BCyrZ/mI3SOXLR7ewm9Q9M8ha17G+ZCvj270mVnW5+n93p3kBWbKJincdwSz9KOw=="}
+
+
+[INFO ] 2017-12-05 16:43:21,374 method:com.pay.service.impl.PayServiceImpl.createOrder(PayServiceImpl.java:147)
+filePath:D:\MyWork\images\qr-10000.png
+
+
+[INFO ] 2017-12-06 15:48:25,073 method:org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)
+Root WebApplicationContext: initialization started
+
+
+[INFO ] 2017-12-06 15:48:25,339 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing Root WebApplicationContext: startup date [Wed Dec 06 15:48:25 CST 2017]; root of context hierarchy
+
+
+[INFO ] 2017-12-06 15:48:25,435 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider\mydubbo_pay_service\target\classes\spring\applicationContext-dao.xml]
+
+
+[INFO ] 2017-12-06 15:48:25,800 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider\mydubbo_pay_service\target\classes\spring\applicationContext-redis.xml]
+
+
+[INFO ] 2017-12-06 15:48:25,846 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider\mydubbo_pay_service\target\classes\spring\applicationContext-service.xml]
+
+
+[INFO ] 2017-12-06 15:48:26,041 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2017-12-06 15:48:26,095 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider\mydubbo_pay_service\target\classes\spring\applicationContext-trans.xml]
+
+
+[INFO ] 2017-12-06 15:48:26,563 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from file [E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider\mydubbo_pay_service\target\classes\conf\db.properties]
+
+
+[INFO ] 2017-12-06 15:48:26,563 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from file [E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider\mydubbo_pay_service\target\classes\conf\resource.properties]
+
+
+[INFO ] 2017-12-06 15:48:26,583 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2017-12-06 15:48:39,951 method:com.alipay.demo.trade.config.Configs.init(Configs.java:78)
+配置文件名: zfbinfo.properties
+
+
+[INFO ] 2017-12-06 15:48:39,952 method:com.alipay.demo.trade.config.Configs.init(Configs.java:79)
+Configs{支付宝openapi网关: https://openapi.alipaydev.com/gateway.do
+, 支付宝mcloudapi网关域名: http://mcloudmonitor.com/gateway.do
+, pid: 2088102173262800
+, appid: 2016082700325200
+, 商户RSA私钥: MIIEvg******S+JEHo
+, 商户RSA公钥: MIIBIj******IDAQAB
+, 支付宝RSA公钥: MIIBIj******IDAQAB
+, 签名类型: RSA2
+, 查询重试次数: 5
+, 查询间隔(毫秒): 5000
+, 撤销尝试次数: 3
+, 撤销重试间隔(毫秒): 2000
+, 交易保障调度延迟(秒): 5
+, 交易保障调度间隔(秒): 900
+}
+
+
+[INFO ] 2017-12-06 15:48:46,525 method:com.alibaba.dubbo.config.spring.ServiceBean.onApplicationEvent(ServiceBean.java:107)
+ [DUBBO] The service ready on spring started. service: com.pay.service.PayService, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-06 15:48:46,786 method:com.alibaba.dubbo.config.ServiceConfig.exportLocal(ServiceConfig.java:510)
+ [DUBBO] Export dubbo service com.pay.service.PayService to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-06 15:48:46,787 method:com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:470)
+ [DUBBO] Export dubbo service com.pay.service.PayService to url dubbo://192.168.0.171:20886/com.pay.service.PayService?anyhost=true&application=mydubbo_pay_p&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder,aliCallback&pid=4472&side=provider&timeout=600000&timestamp=1512546526577, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-06 15:48:46,787 method:com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:481)
+ [DUBBO] Register dubbo service com.pay.service.PayService url dubbo://192.168.0.171:20886/com.pay.service.PayService?anyhost=true&application=mydubbo_pay_p&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder,aliCallback&pid=4472&side=provider&timeout=600000&timestamp=1512546526577 to registry registry://192.168.25.129:2181/com.alibaba.dubbo.registry.RegistryService?application=mydubbo_pay_p&dubbo=2.5.3&pid=4472&registry=zookeeper&timestamp=1512546526544, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-06 15:48:47,315 method:com.alibaba.dubbo.remoting.transport.AbstractServer.<init>(AbstractServer.java:69)
+ [DUBBO] Start NettyServer bind /0.0.0.0:20886, export /192.168.0.171:20886, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-06 15:48:47,390 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:232)
+ [DUBBO] Load registry store file C:\Users\Administrator\.dubbo\dubbo-registry-192.168.25.129.cache, data: {com.cart.service.CartService=empty://192.168.0.171/com.cart.service.CartService?application=mydubbo_cart_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=17424&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512291592336 empty://192.168.0.171/com.cart.service.CartService?application=mydubbo_cart_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=17424&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512291592336 dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=15268&side=provider&timeout=600000&timestamp=1512288648620, com.manager.service.TbItemCatService=empty://192.168.0.171:20880/com.manager.service.TbItemCatService?anyhost=true&application=mydubbo_manager_p&category=configurators&check=false&dubbo=2.5.3&interface=com.manager.service.TbItemCatService&methods=findAllByPid&pid=9676&side=provider&timeout=600000&timestamp=1511855724996, com.user.service.TbUserService=empty://192.168.0.171/com.user.service.TbUserService?application=mydubbo_cart_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.user.service.TbUserService&methods=addUser,toRedisByCookie,checkInfo,login&pid=17424&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512291593424 empty://192.168.0.171/com.user.service.TbUserService?application=mydubbo_cart_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.user.service.TbUserService&methods=addUser,toRedisByCookie,checkInfo,login&pid=17424&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512291593424 dubbo://192.168.0.171:20883/com.user.service.TbUserService?anyhost=true&application=mydubbo_user_p&dubbo=2.5.3&interface=com.user.service.TbUserService&methods=addUser,toRedisByCookie,checkInfo,login&pid=9316&side=provider&timeout=600000&timestamp=1512268298174, com.huarui.service.UsersService=empty://192.168.56.1:20885/com.huarui.service.UsersService?anyhost=true&application=usersService_p&category=configurators&check=false&dubbo=2.5.3&interface=com.huarui.service.UsersService&methods=findall&pid=8944&side=provider&timeout=600000&timestamp=1510282573288, com.content.service.TbContentService=empty://192.168.0.171:20881/com.content.service.TbContentService?anyhost=true&application=mydubbo_content_p&category=configurators&check=false&dubbo=2.5.3&interface=com.content.service.TbContentService&methods=deleteTbContent,addTbContent,findAll,updateTbContent,findByCategoryId&pid=5424&side=provider&timeout=600000&timestamp=1512125390731, com.content.service.TbContentCategoryService=empty://192.168.0.171:20881/com.content.service.TbContentCategoryService?anyhost=true&application=mydubbo_content_p&category=configurators&check=false&dubbo=2.5.3&interface=com.content.service.TbContentCategoryService&methods=updateTbContentCategory,findTbContentCategory,addTbContentCategory,deleteTbContentCategory&pid=5424&side=provider&timeout=600000&timestamp=1512125389899, com.manager.service.TbItemService=empty://192.168.0.171/com.manager.service.TbItemService?application=mydubbo_manager_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.manager.service.TbItemService&methods=addItem,deleteItem,up,updateItem,findItemDescById,down,findAll,findItemById&pid=11552&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512289192882 empty://192.168.0.171/com.manager.service.TbItemService?application=mydubbo_manager_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.manager.service.TbItemService&methods=addItem,deleteItem,up,updateItem,findItemDescById,down,findAll,findItemById&pid=11552&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512289192882 dubbo://192.168.0.171:20880/com.manager.service.TbItemService?anyhost=true&application=mydubbo_manager_p&dubbo=2.5.3&interface=com.manager.service.TbItemService&methods=addItem,deleteItem,up,updateItem,findItemDescById,down,findAll,findItemById&pid=7860&side=provider&timeout=600000&timestamp=1512268939163, com.search.service.SearchItemService=empty://192.168.0.171/com.search.service.SearchItemService?application=mydubbo_search_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.search.service.SearchItemService&methods=selectSolr,findAllItemByInputSolr&pid=9756&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512268376201 empty://192.168.0.171/com.search.service.SearchItemService?application=mydubbo_search_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.search.service.SearchItemService&methods=selectSolr,findAllItemByInputSolr&pid=9756&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512268376201 dubbo://192.168.0.171:20882/com.search.service.SearchItemService?anyhost=true&application=mydubbo_search_p&dubbo=2.5.3&interface=com.search.service.SearchItemService&methods=deleteSolr,addOrUpdateSolr,selectSolr,findAllItemByInputSolr&pid=8388&side=provider&timeout=600000&timestamp=1512268336388, com.pay.service.PayService=empty://192.168.0.171/com.pay.service.PayService?application=mydubbo_pay_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder&pid=7036&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512463104446 empty://192.168.0.171/com.pay.service.PayService?application=mydubbo_pay_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder&pid=7036&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512463104446 dubbo://192.168.0.171:20886/com.pay.service.PayService?anyhost=true&application=mydubbo_pay_p&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder&pid=8936&side=provider&timeout=600000&timestamp=1512462833390}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-06 15:48:47,423 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2017-12-06 15:48:47,444 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+
+
+[INFO ] 2017-12-06 15:48:47,445 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=PC-20161220RILH
+
+
+[INFO ] 2017-12-06 15:48:47,446 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.8.0_131
+
+
+[INFO ] 2017-12-06 15:48:47,446 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2017-12-06 15:48:47,447 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=D:\jdk\Java\jdk1.8.0_131\jre
+
+
+[INFO ] 2017-12-06 15:48:47,447 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=E:\S4\maven\maven01\apache-maven-3.3.9-bin\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar;D:\idea\IntelliJ IDEA 15.0.6\lib\idea_rt.jar
+
+
+[INFO ] 2017-12-06 15:48:47,447 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=D:\jdk\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;E:\oracle\product\10.2.0\db_1\bin;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter\Driver;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\jdk1.7(32wei)\jdk_1.7\Java\jdk1.7.0_72\bin;D:\jdk1.7(32wei)\jdk_1.7\Java\jdk1.7.0_72\jre\bin;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files (x86)\Microsoft SQL Server\80\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Program Files (x86)\Microsoft SQL Server\90\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 8\Common7\IDE\PrivateAssemblies\;D:\mysql\mysql-5.7.17-winx64\bin;D:\adt-bundle-windows-x86_64-20140702\sdk\platform-tools;C:\Program Files\TortoiseSVN\bin;D:\git\Git\cmd;E:\S4\maven\maven01\apache-maven-3.3.9-bin\apache-maven-3.3.9\bin;;.
+
+
+[INFO ] 2017-12-06 15:48:47,448 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+
+
+[INFO ] 2017-12-06 15:48:47,448 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2017-12-06 15:48:47,449 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Windows 7
+
+
+[INFO ] 2017-12-06 15:48:47,449 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=amd64
+
+
+[INFO ] 2017-12-06 15:48:47,450 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=6.1
+
+
+[INFO ] 2017-12-06 15:48:47,451 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=Administrator
+
+
+[INFO ] 2017-12-06 15:48:47,451 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=C:\Users\Administrator
+
+
+[INFO ] 2017-12-06 15:48:47,452 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider
+
+
+[INFO ] 2017-12-06 15:48:47,454 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.25.129:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@1e4bf531
+
+
+[INFO ] 2017-12-06 15:48:47,537 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.129/192.168.25.129:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2017-12-06 15:50:18,216 method:org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)
+Root WebApplicationContext: initialization started
+
+
+[INFO ] 2017-12-06 15:50:18,446 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing Root WebApplicationContext: startup date [Wed Dec 06 15:50:18 CST 2017]; root of context hierarchy
+
+
+[INFO ] 2017-12-06 15:50:18,549 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider\mydubbo_pay_service\target\classes\spring\applicationContext-dao.xml]
+
+
+[INFO ] 2017-12-06 15:50:18,826 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider\mydubbo_pay_service\target\classes\spring\applicationContext-redis.xml]
+
+
+[INFO ] 2017-12-06 15:50:18,867 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider\mydubbo_pay_service\target\classes\spring\applicationContext-service.xml]
+
+
+[INFO ] 2017-12-06 15:50:19,098 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2017-12-06 15:50:19,160 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider\mydubbo_pay_service\target\classes\spring\applicationContext-trans.xml]
+
+
+[INFO ] 2017-12-06 15:50:19,597 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from file [E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider\mydubbo_pay_service\target\classes\conf\db.properties]
+
+
+[INFO ] 2017-12-06 15:50:19,598 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from file [E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider\mydubbo_pay_service\target\classes\conf\resource.properties]
+
+
+[INFO ] 2017-12-06 15:50:19,618 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2017-12-06 15:50:32,968 method:com.alipay.demo.trade.config.Configs.init(Configs.java:78)
+配置文件名: zfbinfo.properties
+
+
+[INFO ] 2017-12-06 15:50:32,969 method:com.alipay.demo.trade.config.Configs.init(Configs.java:79)
+Configs{支付宝openapi网关: https://openapi.alipaydev.com/gateway.do
+, 支付宝mcloudapi网关域名: http://mcloudmonitor.com/gateway.do
+, pid: 2088102173262800
+, appid: 2016082700325200
+, 商户RSA私钥: MIIEvg******S+JEHo
+, 商户RSA公钥: MIIBIj******IDAQAB
+, 支付宝RSA公钥: MIIBIj******IDAQAB
+, 签名类型: RSA2
+, 查询重试次数: 5
+, 查询间隔(毫秒): 5000
+, 撤销尝试次数: 3
+, 撤销重试间隔(毫秒): 2000
+, 交易保障调度延迟(秒): 5
+, 交易保障调度间隔(秒): 900
+}
+
+
+[INFO ] 2017-12-06 15:50:34,218 method:com.alibaba.dubbo.config.spring.ServiceBean.onApplicationEvent(ServiceBean.java:107)
+ [DUBBO] The service ready on spring started. service: com.pay.service.PayService, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-06 15:50:34,862 method:com.alibaba.dubbo.config.ServiceConfig.exportLocal(ServiceConfig.java:510)
+ [DUBBO] Export dubbo service com.pay.service.PayService to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-06 15:50:34,863 method:com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:470)
+ [DUBBO] Export dubbo service com.pay.service.PayService to url dubbo://192.168.0.171:20886/com.pay.service.PayService?anyhost=true&application=mydubbo_pay_p&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder,aliCallback&pid=1480&side=provider&timeout=600000&timestamp=1512546634267, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-06 15:50:34,864 method:com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:481)
+ [DUBBO] Register dubbo service com.pay.service.PayService url dubbo://192.168.0.171:20886/com.pay.service.PayService?anyhost=true&application=mydubbo_pay_p&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder,aliCallback&pid=1480&side=provider&timeout=600000&timestamp=1512546634267 to registry registry://192.168.25.129:2181/com.alibaba.dubbo.registry.RegistryService?application=mydubbo_pay_p&dubbo=2.5.3&pid=1480&registry=zookeeper&timestamp=1512546634233, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-06 15:50:35,223 method:com.alibaba.dubbo.remoting.transport.AbstractServer.<init>(AbstractServer.java:69)
+ [DUBBO] Start NettyServer bind /0.0.0.0:20886, export /192.168.0.171:20886, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-06 15:50:35,269 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:232)
+ [DUBBO] Load registry store file C:\Users\Administrator\.dubbo\dubbo-registry-192.168.25.129.cache, data: {com.cart.service.CartService=empty://192.168.0.171/com.cart.service.CartService?application=mydubbo_cart_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=17424&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512291592336 empty://192.168.0.171/com.cart.service.CartService?application=mydubbo_cart_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=17424&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512291592336 dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=15268&side=provider&timeout=600000&timestamp=1512288648620, com.manager.service.TbItemCatService=empty://192.168.0.171:20880/com.manager.service.TbItemCatService?anyhost=true&application=mydubbo_manager_p&category=configurators&check=false&dubbo=2.5.3&interface=com.manager.service.TbItemCatService&methods=findAllByPid&pid=9676&side=provider&timeout=600000&timestamp=1511855724996, com.user.service.TbUserService=empty://192.168.0.171/com.user.service.TbUserService?application=mydubbo_cart_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.user.service.TbUserService&methods=addUser,toRedisByCookie,checkInfo,login&pid=17424&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512291593424 empty://192.168.0.171/com.user.service.TbUserService?application=mydubbo_cart_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.user.service.TbUserService&methods=addUser,toRedisByCookie,checkInfo,login&pid=17424&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512291593424 dubbo://192.168.0.171:20883/com.user.service.TbUserService?anyhost=true&application=mydubbo_user_p&dubbo=2.5.3&interface=com.user.service.TbUserService&methods=addUser,toRedisByCookie,checkInfo,login&pid=9316&side=provider&timeout=600000&timestamp=1512268298174, com.huarui.service.UsersService=empty://192.168.56.1:20885/com.huarui.service.UsersService?anyhost=true&application=usersService_p&category=configurators&check=false&dubbo=2.5.3&interface=com.huarui.service.UsersService&methods=findall&pid=8944&side=provider&timeout=600000&timestamp=1510282573288, com.content.service.TbContentService=empty://192.168.0.171:20881/com.content.service.TbContentService?anyhost=true&application=mydubbo_content_p&category=configurators&check=false&dubbo=2.5.3&interface=com.content.service.TbContentService&methods=deleteTbContent,addTbContent,findAll,updateTbContent,findByCategoryId&pid=5424&side=provider&timeout=600000&timestamp=1512125390731, com.content.service.TbContentCategoryService=empty://192.168.0.171:20881/com.content.service.TbContentCategoryService?anyhost=true&application=mydubbo_content_p&category=configurators&check=false&dubbo=2.5.3&interface=com.content.service.TbContentCategoryService&methods=updateTbContentCategory,findTbContentCategory,addTbContentCategory,deleteTbContentCategory&pid=5424&side=provider&timeout=600000&timestamp=1512125389899, com.manager.service.TbItemService=empty://192.168.0.171/com.manager.service.TbItemService?application=mydubbo_manager_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.manager.service.TbItemService&methods=addItem,deleteItem,up,updateItem,findItemDescById,down,findAll,findItemById&pid=11552&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512289192882 empty://192.168.0.171/com.manager.service.TbItemService?application=mydubbo_manager_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.manager.service.TbItemService&methods=addItem,deleteItem,up,updateItem,findItemDescById,down,findAll,findItemById&pid=11552&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512289192882 dubbo://192.168.0.171:20880/com.manager.service.TbItemService?anyhost=true&application=mydubbo_manager_p&dubbo=2.5.3&interface=com.manager.service.TbItemService&methods=addItem,deleteItem,up,updateItem,findItemDescById,down,findAll,findItemById&pid=7860&side=provider&timeout=600000&timestamp=1512268939163, com.search.service.SearchItemService=empty://192.168.0.171/com.search.service.SearchItemService?application=mydubbo_search_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.search.service.SearchItemService&methods=selectSolr,findAllItemByInputSolr&pid=9756&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512268376201 empty://192.168.0.171/com.search.service.SearchItemService?application=mydubbo_search_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.search.service.SearchItemService&methods=selectSolr,findAllItemByInputSolr&pid=9756&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512268376201 dubbo://192.168.0.171:20882/com.search.service.SearchItemService?anyhost=true&application=mydubbo_search_p&dubbo=2.5.3&interface=com.search.service.SearchItemService&methods=deleteSolr,addOrUpdateSolr,selectSolr,findAllItemByInputSolr&pid=8388&side=provider&timeout=600000&timestamp=1512268336388, com.pay.service.PayService=empty://192.168.0.171/com.pay.service.PayService?application=mydubbo_pay_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder&pid=7036&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512463104446 empty://192.168.0.171/com.pay.service.PayService?application=mydubbo_pay_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder&pid=7036&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512463104446 dubbo://192.168.0.171:20886/com.pay.service.PayService?anyhost=true&application=mydubbo_pay_p&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder&pid=8936&side=provider&timeout=600000&timestamp=1512462833390}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-06 15:50:35,301 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2017-12-06 15:50:35,324 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+
+
+[INFO ] 2017-12-06 15:50:35,325 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=PC-20161220RILH
+
+
+[INFO ] 2017-12-06 15:50:35,326 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.8.0_131
+
+
+[INFO ] 2017-12-06 15:50:35,326 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2017-12-06 15:50:35,326 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=D:\jdk\Java\jdk1.8.0_131\jre
+
+
+[INFO ] 2017-12-06 15:50:35,327 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=E:\S4\maven\maven01\apache-maven-3.3.9-bin\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar;D:\idea\IntelliJ IDEA 15.0.6\lib\idea_rt.jar
+
+
+[INFO ] 2017-12-06 15:50:35,327 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=D:\jdk\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;E:\oracle\product\10.2.0\db_1\bin;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter\Driver;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\jdk1.7(32wei)\jdk_1.7\Java\jdk1.7.0_72\bin;D:\jdk1.7(32wei)\jdk_1.7\Java\jdk1.7.0_72\jre\bin;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files (x86)\Microsoft SQL Server\80\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Program Files (x86)\Microsoft SQL Server\90\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 8\Common7\IDE\PrivateAssemblies\;D:\mysql\mysql-5.7.17-winx64\bin;D:\adt-bundle-windows-x86_64-20140702\sdk\platform-tools;C:\Program Files\TortoiseSVN\bin;D:\git\Git\cmd;E:\S4\maven\maven01\apache-maven-3.3.9-bin\apache-maven-3.3.9\bin;;.
+
+
+[INFO ] 2017-12-06 15:50:35,327 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+
+
+[INFO ] 2017-12-06 15:50:35,327 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2017-12-06 15:50:35,328 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Windows 7
+
+
+[INFO ] 2017-12-06 15:50:35,328 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=amd64
+
+
+[INFO ] 2017-12-06 15:50:35,329 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=6.1
+
+
+[INFO ] 2017-12-06 15:50:35,329 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=Administrator
+
+
+[INFO ] 2017-12-06 15:50:35,329 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=C:\Users\Administrator
+
+
+[INFO ] 2017-12-06 15:50:35,330 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider
+
+
+[INFO ] 2017-12-06 15:50:35,332 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.25.129:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@b04ecde
+
+
+[INFO ] 2017-12-06 15:50:35,378 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.129/192.168.25.129:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2017-12-06 15:50:35,381 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.25.129/192.168.25.129:2181, initiating session
+
+
+[INFO ] 2017-12-06 15:50:35,402 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.25.129/192.168.25.129:2181, sessionid = 0x1601be6b3320024, negotiated timeout = 30000
+
+
+[INFO ] 2017-12-06 15:50:35,406 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2017-12-06 15:50:35,412 method:com.alibaba.dubbo.registry.support.AbstractRegistry.register(AbstractRegistry.java:302)
+ [DUBBO] Register: dubbo://192.168.0.171:20886/com.pay.service.PayService?anyhost=true&application=mydubbo_pay_p&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder,aliCallback&pid=1480&side=provider&timeout=600000&timestamp=1512546634267, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-06 15:50:35,468 method:com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(AbstractRegistry.java:325)
+ [DUBBO] Subscribe: provider://192.168.0.171:20886/com.pay.service.PayService?anyhost=true&application=mydubbo_pay_p&category=configurators&check=false&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder,aliCallback&pid=1480&side=provider&timeout=600000&timestamp=1512546634267, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-06 15:50:35,498 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url provider://192.168.0.171:20886/com.pay.service.PayService?anyhost=true&application=mydubbo_pay_p&category=configurators&check=false&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder,aliCallback&pid=1480&side=provider&timeout=600000&timestamp=1512546634267, urls: [empty://192.168.0.171:20886/com.pay.service.PayService?anyhost=true&application=mydubbo_pay_p&category=configurators&check=false&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder,aliCallback&pid=1480&side=provider&timeout=600000&timestamp=1512546634267], dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-06 15:50:35,592 method:org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:347)
+Root WebApplicationContext: initialization completed in 17371 ms
+
+
+[INFO ] 2017-12-06 15:51:27,081 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:655)
+{dataSource-1} inited
+
+
+[INFO ] 2017-12-06 15:51:28,074 method:com.alipay.demo.trade.service.impl.AbsAlipayTradeService.tradePrecreate(AbsAlipayTradeService.java:100)
+trade.precreate bizContent:{"out_trade_no":"10000","seller_id":"","total_amount":"100","undiscountable_amount":"0","subject":"华瑞商城：扫码支付【10000】","body":"购买商品*件共100元","goods_detail":[{"goods_id":"102","goods_name":"mysql","quantity":1,"price":"0.5"},{"goods_id":"101","goods_name":"java","quantity":1,"price":"0.5"}],"operator_id":"test_operator_id","store_id":"test_store_id","extend_params":{"sys_service_provider_id":"2088100200300400500"},"timeout_express":"120m"}
+
+
+[INFO ] 2017-12-06 15:51:31,484 method:com.alipay.demo.trade.service.impl.AbsAlipayService.getResponse(AbsAlipayService.java:34)
+{"alipay_trade_precreate_response":{"code":"10000","msg":"Success","out_trade_no":"10000","qr_code":"https:\/\/qr.alipay.com\/bax044016ixxsmyz9cbo0084"},"sign":"EAISwPxadR/V38IB3rFcjGOaZWJ+bhU14MZiaWXWBAX9D1+PkVMJxnIQTXXOgij/H9kqVV9yJyc4afDdcnLFX7/ZgQlv01O/xE+GZOyjHl/a1SfcA9f4XpVx/Xn3VyBLU69ejjJPIB9Qqvo6by88F+OSs70JW0L98VnHn8o8ZHowcdOEQqo1tBXOYJm4rxf0ysuGSnetlCs6gJI+UTIdF7jDSMMrZR5s+joa6ghAa4KaJi6tWwa9Mu0/bh73IWY36/HKtgiDD70zMVG/mOgbX0UMvQab3z2c/5RcR3umtBZJN0htziT9xrZA5ODS9tnSZN3aTOOb2T1MNVsDtDOitw=="}
+
+
+[INFO ] 2017-12-06 15:51:31,489 method:com.pay.service.impl.PayServiceImpl.createOrder(PayServiceImpl.java:140)
+支付宝预下单成功: )
+
+
+[INFO ] 2017-12-06 15:51:31,490 method:com.pay.service.impl.PayServiceImpl.dumpResponse(PayServiceImpl.java:204)
+code:10000, msg:Success
+
+
+[INFO ] 2017-12-06 15:51:31,491 method:com.pay.service.impl.PayServiceImpl.dumpResponse(PayServiceImpl.java:209)
+body:{"alipay_trade_precreate_response":{"code":"10000","msg":"Success","out_trade_no":"10000","qr_code":"https:\/\/qr.alipay.com\/bax044016ixxsmyz9cbo0084"},"sign":"EAISwPxadR/V38IB3rFcjGOaZWJ+bhU14MZiaWXWBAX9D1+PkVMJxnIQTXXOgij/H9kqVV9yJyc4afDdcnLFX7/ZgQlv01O/xE+GZOyjHl/a1SfcA9f4XpVx/Xn3VyBLU69ejjJPIB9Qqvo6by88F+OSs70JW0L98VnHn8o8ZHowcdOEQqo1tBXOYJm4rxf0ysuGSnetlCs6gJI+UTIdF7jDSMMrZR5s+joa6ghAa4KaJi6tWwa9Mu0/bh73IWY36/HKtgiDD70zMVG/mOgbX0UMvQab3z2c/5RcR3umtBZJN0htziT9xrZA5ODS9tnSZN3aTOOb2T1MNVsDtDOitw=="}
+
+
+[INFO ] 2017-12-06 15:51:31,492 method:com.pay.service.impl.PayServiceImpl.createOrder(PayServiceImpl.java:148)
+filePath:D:\MyWork\images\qr-10000.png
+
+
+[INFO ] 2017-12-06 15:53:20,406 method:com.alipay.demo.trade.service.impl.AbsAlipayTradeService.tradePrecreate(AbsAlipayTradeService.java:100)
+trade.precreate bizContent:{"out_trade_no":"10001","seller_id":"","total_amount":"100","undiscountable_amount":"0","subject":"华瑞商城：扫码支付【10001】","body":"购买商品*件共100元","goods_detail":[{"goods_id":"102","goods_name":"mysql","quantity":1,"price":"0.5"},{"goods_id":"101","goods_name":"java","quantity":1,"price":"0.5"}],"operator_id":"test_operator_id","store_id":"test_store_id","extend_params":{"sys_service_provider_id":"2088100200300400500"},"timeout_express":"120m"}
+
+
+[INFO ] 2017-12-06 15:53:21,676 method:com.alipay.demo.trade.service.impl.AbsAlipayService.getResponse(AbsAlipayService.java:34)
+{"alipay_trade_precreate_response":{"code":"10000","msg":"Success","out_trade_no":"10001","qr_code":"https:\/\/qr.alipay.com\/bax094626gqgs9myzgfz0055"},"sign":"GarTtlKryMPmITx2xIUdBkKnrnUWtoTV/ONjSoctwAGwkHZlrVidlRLZc7R97eMQsblqa/driZ7jfAnsQ6OPJRXlt/VdiUwQmlhUxR6HEc7zj5b0TVojWm6bQkEN6dS4Ev5iZswAy9MRsYpxD31IRSGRGfvWin/Q5glkVAYAfyNZzPrXD9dqIy1Rd2E/CjJehbmV803etDtHQKHrFZWTxyvupqCNYIWQj0ZXIUaz2k3Xpv9YdPqsQsTKFXPZegj878slW0G99DPJU1dZyF+ME96cAosXQ8LVsnwtX4K0oqg1rf6lfa7yf21uS+nbHlTU8Tcl1PJdRpixMPmM3m0yGg=="}
+
+
+[INFO ] 2017-12-06 15:53:21,676 method:com.pay.service.impl.PayServiceImpl.createOrder(PayServiceImpl.java:140)
+支付宝预下单成功: )
+
+
+[INFO ] 2017-12-06 15:53:21,678 method:com.pay.service.impl.PayServiceImpl.dumpResponse(PayServiceImpl.java:204)
+code:10000, msg:Success
+
+
+[INFO ] 2017-12-06 15:53:21,679 method:com.pay.service.impl.PayServiceImpl.dumpResponse(PayServiceImpl.java:209)
+body:{"alipay_trade_precreate_response":{"code":"10000","msg":"Success","out_trade_no":"10001","qr_code":"https:\/\/qr.alipay.com\/bax094626gqgs9myzgfz0055"},"sign":"GarTtlKryMPmITx2xIUdBkKnrnUWtoTV/ONjSoctwAGwkHZlrVidlRLZc7R97eMQsblqa/driZ7jfAnsQ6OPJRXlt/VdiUwQmlhUxR6HEc7zj5b0TVojWm6bQkEN6dS4Ev5iZswAy9MRsYpxD31IRSGRGfvWin/Q5glkVAYAfyNZzPrXD9dqIy1Rd2E/CjJehbmV803etDtHQKHrFZWTxyvupqCNYIWQj0ZXIUaz2k3Xpv9YdPqsQsTKFXPZegj878slW0G99DPJU1dZyF+ME96cAosXQ8LVsnwtX4K0oqg1rf6lfa7yf21uS+nbHlTU8Tcl1PJdRpixMPmM3m0yGg=="}
+
+
+[INFO ] 2017-12-06 15:53:21,679 method:com.pay.service.impl.PayServiceImpl.createOrder(PayServiceImpl.java:148)
+filePath:D:\MyWork\images\qr-10001.png
+
+
+[INFO ] 2017-12-06 15:58:50,496 method:org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:307)
+Root WebApplicationContext: initialization started
+
+
+[INFO ] 2017-12-06 15:58:50,725 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:578)
+Refreshing Root WebApplicationContext: startup date [Wed Dec 06 15:58:50 CST 2017]; root of context hierarchy
+
+
+[INFO ] 2017-12-06 15:58:50,827 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider\mydubbo_pay_service\target\classes\spring\applicationContext-dao.xml]
+
+
+[INFO ] 2017-12-06 15:58:51,190 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider\mydubbo_pay_service\target\classes\spring\applicationContext-redis.xml]
+
+
+[INFO ] 2017-12-06 15:58:51,235 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider\mydubbo_pay_service\target\classes\spring\applicationContext-service.xml]
+
+
+[INFO ] 2017-12-06 15:58:51,838 method:
+using logger: com.alibaba.dubbo.common.logger.log4j.Log4jLoggerAdapter
+
+
+[INFO ] 2017-12-06 15:58:51,901 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider\mydubbo_pay_service\target\classes\spring\applicationContext-trans.xml]
+
+
+[INFO ] 2017-12-06 15:58:52,437 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from file [E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider\mydubbo_pay_service\target\classes\conf\db.properties]
+
+
+[INFO ] 2017-12-06 15:58:52,438 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from file [E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider\mydubbo_pay_service\target\classes\conf\resource.properties]
+
+
+[INFO ] 2017-12-06 15:58:52,472 method:org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.<init>(AutowiredAnnotationBeanPostProcessor.java:153)
+JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+
+
+[INFO ] 2017-12-06 15:59:06,729 method:com.alipay.demo.trade.config.Configs.init(Configs.java:78)
+配置文件名: zfbinfo.properties
+
+
+[INFO ] 2017-12-06 15:59:06,729 method:com.alipay.demo.trade.config.Configs.init(Configs.java:79)
+Configs{支付宝openapi网关: https://openapi.alipaydev.com/gateway.do
+, 支付宝mcloudapi网关域名: http://mcloudmonitor.com/gateway.do
+, pid: 2088102173262800
+, appid: 2016082700325200
+, 商户RSA私钥: MIIEvg******S+JEHo
+, 商户RSA公钥: MIIBIj******IDAQAB
+, 支付宝RSA公钥: MIIBIj******IDAQAB
+, 签名类型: RSA2
+, 查询重试次数: 5
+, 查询间隔(毫秒): 5000
+, 撤销尝试次数: 3
+, 撤销重试间隔(毫秒): 2000
+, 交易保障调度延迟(秒): 5
+, 交易保障调度间隔(秒): 900
+}
+
+
+[INFO ] 2017-12-06 15:59:07,912 method:com.alibaba.dubbo.config.spring.ServiceBean.onApplicationEvent(ServiceBean.java:107)
+ [DUBBO] The service ready on spring started. service: com.pay.service.PayService, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-06 15:59:08,153 method:com.alibaba.dubbo.config.ServiceConfig.exportLocal(ServiceConfig.java:510)
+ [DUBBO] Export dubbo service com.pay.service.PayService to local registry, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-06 15:59:08,154 method:com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:470)
+ [DUBBO] Export dubbo service com.pay.service.PayService to url dubbo://192.168.0.171:20886/com.pay.service.PayService?anyhost=true&application=mydubbo_pay_p&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder,aliCallback&pid=5540&side=provider&timeout=600000&timestamp=1512547147962, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-06 15:59:08,155 method:com.alibaba.dubbo.config.ServiceConfig.doExportUrlsFor1Protocol(ServiceConfig.java:481)
+ [DUBBO] Register dubbo service com.pay.service.PayService url dubbo://192.168.0.171:20886/com.pay.service.PayService?anyhost=true&application=mydubbo_pay_p&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder,aliCallback&pid=5540&side=provider&timeout=600000&timestamp=1512547147962 to registry registry://192.168.25.129:2181/com.alibaba.dubbo.registry.RegistryService?application=mydubbo_pay_p&dubbo=2.5.3&pid=5540&registry=zookeeper&timestamp=1512547147929, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-06 15:59:08,511 method:com.alibaba.dubbo.remoting.transport.AbstractServer.<init>(AbstractServer.java:69)
+ [DUBBO] Start NettyServer bind /0.0.0.0:20886, export /192.168.0.171:20886, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-06 15:59:08,553 method:com.alibaba.dubbo.registry.support.AbstractRegistry.loadProperties(AbstractRegistry.java:232)
+ [DUBBO] Load registry store file C:\Users\Administrator\.dubbo\dubbo-registry-192.168.25.129.cache, data: {com.cart.service.CartService=empty://192.168.0.171/com.cart.service.CartService?application=mydubbo_cart_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=17424&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512291592336 empty://192.168.0.171/com.cart.service.CartService?application=mydubbo_cart_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=17424&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512291592336 dubbo://192.168.0.171:20884/com.cart.service.CartService?anyhost=true&application=mydubbo_cart_p&dubbo=2.5.3&interface=com.cart.service.CartService&methods=delCart,addCart,findItem,delCartAll&pid=15268&side=provider&timeout=600000&timestamp=1512288648620, com.manager.service.TbItemCatService=empty://192.168.0.171:20880/com.manager.service.TbItemCatService?anyhost=true&application=mydubbo_manager_p&category=configurators&check=false&dubbo=2.5.3&interface=com.manager.service.TbItemCatService&methods=findAllByPid&pid=9676&side=provider&timeout=600000&timestamp=1511855724996, com.user.service.TbUserService=empty://192.168.0.171/com.user.service.TbUserService?application=mydubbo_cart_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.user.service.TbUserService&methods=addUser,toRedisByCookie,checkInfo,login&pid=17424&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512291593424 empty://192.168.0.171/com.user.service.TbUserService?application=mydubbo_cart_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.user.service.TbUserService&methods=addUser,toRedisByCookie,checkInfo,login&pid=17424&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512291593424 dubbo://192.168.0.171:20883/com.user.service.TbUserService?anyhost=true&application=mydubbo_user_p&dubbo=2.5.3&interface=com.user.service.TbUserService&methods=addUser,toRedisByCookie,checkInfo,login&pid=9316&side=provider&timeout=600000&timestamp=1512268298174, com.huarui.service.UsersService=empty://192.168.56.1:20885/com.huarui.service.UsersService?anyhost=true&application=usersService_p&category=configurators&check=false&dubbo=2.5.3&interface=com.huarui.service.UsersService&methods=findall&pid=8944&side=provider&timeout=600000&timestamp=1510282573288, com.content.service.TbContentService=empty://192.168.0.171:20881/com.content.service.TbContentService?anyhost=true&application=mydubbo_content_p&category=configurators&check=false&dubbo=2.5.3&interface=com.content.service.TbContentService&methods=deleteTbContent,addTbContent,findAll,updateTbContent,findByCategoryId&pid=5424&side=provider&timeout=600000&timestamp=1512125390731, com.content.service.TbContentCategoryService=empty://192.168.0.171:20881/com.content.service.TbContentCategoryService?anyhost=true&application=mydubbo_content_p&category=configurators&check=false&dubbo=2.5.3&interface=com.content.service.TbContentCategoryService&methods=updateTbContentCategory,findTbContentCategory,addTbContentCategory,deleteTbContentCategory&pid=5424&side=provider&timeout=600000&timestamp=1512125389899, com.manager.service.TbItemService=empty://192.168.0.171/com.manager.service.TbItemService?application=mydubbo_manager_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.manager.service.TbItemService&methods=addItem,deleteItem,up,updateItem,findItemDescById,down,findAll,findItemById&pid=11552&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512289192882 empty://192.168.0.171/com.manager.service.TbItemService?application=mydubbo_manager_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.manager.service.TbItemService&methods=addItem,deleteItem,up,updateItem,findItemDescById,down,findAll,findItemById&pid=11552&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512289192882 dubbo://192.168.0.171:20880/com.manager.service.TbItemService?anyhost=true&application=mydubbo_manager_p&dubbo=2.5.3&interface=com.manager.service.TbItemService&methods=addItem,deleteItem,up,updateItem,findItemDescById,down,findAll,findItemById&pid=7860&side=provider&timeout=600000&timestamp=1512268939163, com.search.service.SearchItemService=empty://192.168.0.171/com.search.service.SearchItemService?application=mydubbo_search_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.search.service.SearchItemService&methods=selectSolr,findAllItemByInputSolr&pid=9756&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512268376201 empty://192.168.0.171/com.search.service.SearchItemService?application=mydubbo_search_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.search.service.SearchItemService&methods=selectSolr,findAllItemByInputSolr&pid=9756&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512268376201 dubbo://192.168.0.171:20882/com.search.service.SearchItemService?anyhost=true&application=mydubbo_search_p&dubbo=2.5.3&interface=com.search.service.SearchItemService&methods=deleteSolr,addOrUpdateSolr,selectSolr,findAllItemByInputSolr&pid=8388&side=provider&timeout=600000&timestamp=1512268336388, com.pay.service.PayService=empty://192.168.0.171/com.pay.service.PayService?application=mydubbo_pay_web&category=configurators&default.check=false&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder,aliCallback&pid=8352&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512546666480 empty://192.168.0.171/com.pay.service.PayService?application=mydubbo_pay_web&category=routers&default.check=false&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder,aliCallback&pid=8352&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512546666480 empty://192.168.0.171/com.pay.service.PayService?application=mydubbo_pay_web&category=providers&default.check=false&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder,aliCallback&pid=8352&revision=1.0-SNAPSHOT&side=consumer&timestamp=1512546666480}, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-06 15:59:08,585 method:org.I0Itec.zkclient.ZkEventThread.run(ZkEventThread.java:64)
+Starting ZkClient event thread.
+
+
+[INFO ] 2017-12-06 15:59:08,606 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:zookeeper.version=3.4.7-1713338, built on 11/09/2015 04:32 GMT
+
+
+[INFO ] 2017-12-06 15:59:08,607 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:host.name=PC-20161220RILH
+
+
+[INFO ] 2017-12-06 15:59:08,608 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.version=1.8.0_131
+
+
+[INFO ] 2017-12-06 15:59:08,608 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.vendor=Oracle Corporation
+
+
+[INFO ] 2017-12-06 15:59:08,608 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.home=D:\jdk\Java\jdk1.8.0_131\jre
+
+
+[INFO ] 2017-12-06 15:59:08,608 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.class.path=E:\S4\maven\maven01\apache-maven-3.3.9-bin\apache-maven-3.3.9\boot\plexus-classworlds-2.5.2.jar;D:\idea\IntelliJ IDEA 15.0.6\lib\idea_rt.jar
+
+
+[INFO ] 2017-12-06 15:59:08,609 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.library.path=D:\jdk\Java\jdk1.8.0_131\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;E:\oracle\product\10.2.0\db_1\bin;C:\Program Files\Broadcom\Broadcom 802.11 Network Adapter\Driver;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;D:\jdk1.7(32wei)\jdk_1.7\Java\jdk1.7.0_72\bin;D:\jdk1.7(32wei)\jdk_1.7\Java\jdk1.7.0_72\jre\bin;C:\Program Files\WIDCOMM\Bluetooth Software\;C:\Program Files\WIDCOMM\Bluetooth Software\syswow64;C:\Program Files (x86)\Microsoft SQL Server\80\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Program Files (x86)\Microsoft SQL Server\90\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 8\Common7\IDE\PrivateAssemblies\;D:\mysql\mysql-5.7.17-winx64\bin;D:\adt-bundle-windows-x86_64-20140702\sdk\platform-tools;C:\Program Files\TortoiseSVN\bin;D:\git\Git\cmd;E:\S4\maven\maven01\apache-maven-3.3.9-bin\apache-maven-3.3.9\bin;;.
+
+
+[INFO ] 2017-12-06 15:59:08,609 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.io.tmpdir=C:\Users\ADMINI~1\AppData\Local\Temp\
+
+
+[INFO ] 2017-12-06 15:59:08,610 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:java.compiler=<NA>
+
+
+[INFO ] 2017-12-06 15:59:08,610 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.name=Windows 7
+
+
+[INFO ] 2017-12-06 15:59:08,610 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.arch=amd64
+
+
+[INFO ] 2017-12-06 15:59:08,611 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:os.version=6.1
+
+
+[INFO ] 2017-12-06 15:59:08,611 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.name=Administrator
+
+
+[INFO ] 2017-12-06 15:59:08,611 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.home=C:\Users\Administrator
+
+
+[INFO ] 2017-12-06 15:59:08,612 method:org.apache.zookeeper.Environment.logEnv(Environment.java:100)
+Client environment:user.dir=E:\S4\last\dubbo_work\myFileService\mydubbo_pay_provider
+
+
+[INFO ] 2017-12-06 15:59:08,615 method:org.apache.zookeeper.ZooKeeper.<init>(ZooKeeper.java:438)
+Initiating client connection, connectString=192.168.25.129:2181 sessionTimeout=30000 watcher=org.I0Itec.zkclient.ZkClient@72643a7d
+
+
+[INFO ] 2017-12-06 15:59:08,661 method:org.apache.zookeeper.ClientCnxn$SendThread.logStartConnect(ClientCnxn.java:1032)
+Opening socket connection to server 192.168.25.129/192.168.25.129:2181. Will not attempt to authenticate using SASL (unknown error)
+
+
+[INFO ] 2017-12-06 15:59:08,663 method:org.apache.zookeeper.ClientCnxn$SendThread.primeConnection(ClientCnxn.java:876)
+Socket connection established to 192.168.25.129/192.168.25.129:2181, initiating session
+
+
+[INFO ] 2017-12-06 15:59:08,678 method:org.apache.zookeeper.ClientCnxn$SendThread.onConnected(ClientCnxn.java:1299)
+Session establishment complete on server 192.168.25.129/192.168.25.129:2181, sessionid = 0x1601be6b3320026, negotiated timeout = 30000
+
+
+[INFO ] 2017-12-06 15:59:08,682 method:org.I0Itec.zkclient.ZkClient.processStateChanged(ZkClient.java:449)
+zookeeper state changed (SyncConnected)
+
+
+[INFO ] 2017-12-06 15:59:08,687 method:com.alibaba.dubbo.registry.support.AbstractRegistry.register(AbstractRegistry.java:302)
+ [DUBBO] Register: dubbo://192.168.0.171:20886/com.pay.service.PayService?anyhost=true&application=mydubbo_pay_p&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder,aliCallback&pid=5540&side=provider&timeout=600000&timestamp=1512547147962, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-06 15:59:08,738 method:com.alibaba.dubbo.registry.support.AbstractRegistry.subscribe(AbstractRegistry.java:325)
+ [DUBBO] Subscribe: provider://192.168.0.171:20886/com.pay.service.PayService?anyhost=true&application=mydubbo_pay_p&category=configurators&check=false&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder,aliCallback&pid=5540&side=provider&timeout=600000&timestamp=1512547147962, dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-06 15:59:08,796 method:com.alibaba.dubbo.registry.support.AbstractRegistry.notify(AbstractRegistry.java:422)
+ [DUBBO] Notify urls for subscribe url provider://192.168.0.171:20886/com.pay.service.PayService?anyhost=true&application=mydubbo_pay_p&category=configurators&check=false&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder,aliCallback&pid=5540&side=provider&timeout=600000&timestamp=1512547147962, urls: [empty://192.168.0.171:20886/com.pay.service.PayService?anyhost=true&application=mydubbo_pay_p&category=configurators&check=false&dubbo=2.5.3&interface=com.pay.service.PayService&methods=createOrder,aliCallback&pid=5540&side=provider&timeout=600000&timestamp=1512547147962], dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-06 15:59:08,881 method:org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:347)
+Root WebApplicationContext: initialization completed in 18380 ms
+
+
+[INFO ] 2017-12-06 15:59:45,509 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:655)
+{dataSource-1} inited
+
+
+[INFO ] 2017-12-06 15:59:46,821 method:com.alipay.demo.trade.service.impl.AbsAlipayTradeService.tradePrecreate(AbsAlipayTradeService.java:100)
+trade.precreate bizContent:{"out_trade_no":"10002","seller_id":"","total_amount":"100","undiscountable_amount":"0","subject":"华瑞商城：扫码支付【10002】","body":"购买商品*件共100元","goods_detail":[{"goods_id":"102","goods_name":"mysql","quantity":1,"price":"0.5"},{"goods_id":"101","goods_name":"java","quantity":1,"price":"0.5"}],"operator_id":"test_operator_id","store_id":"test_store_id","extend_params":{"sys_service_provider_id":"2088100200300400500"},"timeout_express":"120m"}
+
+
+[INFO ] 2017-12-06 15:59:49,400 method:com.alipay.demo.trade.service.impl.AbsAlipayService.getResponse(AbsAlipayService.java:34)
+{"alipay_trade_precreate_response":{"code":"10000","msg":"Success","out_trade_no":"10002","qr_code":"https:\/\/qr.alipay.com\/bax03880p7aecmfbnjga00e7"},"sign":"SmjisoCX6vuqQSgy4GnnrMHFGaJ5Z9xm/r2zgauxYGh44xTEfYE8KrSNSQuDAj8zfBZPBby+n5lRJFam3DUQYLw65yUgBkjpU3Bv43jV2nNXzJ4BK3gq7NVLp7kjjkmwOhmOL7GgIfr621eiiRla49Km22go8D/P3aP9QsN7ehLSUx4vt75hIBmahIjLEcZIC6wgPTm6jsndPxJPheht4Rlr3+PgLTrA2S8P3IkjzX176gy/6A7TmXWPrOe5JOy3UbsZxHtsKK+a3gLuM4X0KSjGmOUTrJnsdTioRi7ou1UKyUDVFqqx6nEp53iNAq+1GW1pM/NCA5EfWEKZGCtmGg=="}
+
+
+[INFO ] 2017-12-06 15:59:49,404 method:com.pay.service.impl.PayServiceImpl.createOrder(PayServiceImpl.java:140)
+支付宝预下单成功: )
+
+
+[INFO ] 2017-12-06 15:59:49,405 method:com.pay.service.impl.PayServiceImpl.dumpResponse(PayServiceImpl.java:204)
+code:10000, msg:Success
+
+
+[INFO ] 2017-12-06 15:59:49,405 method:com.pay.service.impl.PayServiceImpl.dumpResponse(PayServiceImpl.java:209)
+body:{"alipay_trade_precreate_response":{"code":"10000","msg":"Success","out_trade_no":"10002","qr_code":"https:\/\/qr.alipay.com\/bax03880p7aecmfbnjga00e7"},"sign":"SmjisoCX6vuqQSgy4GnnrMHFGaJ5Z9xm/r2zgauxYGh44xTEfYE8KrSNSQuDAj8zfBZPBby+n5lRJFam3DUQYLw65yUgBkjpU3Bv43jV2nNXzJ4BK3gq7NVLp7kjjkmwOhmOL7GgIfr621eiiRla49Km22go8D/P3aP9QsN7ehLSUx4vt75hIBmahIjLEcZIC6wgPTm6jsndPxJPheht4Rlr3+PgLTrA2S8P3IkjzX176gy/6A7TmXWPrOe5JOy3UbsZxHtsKK+a3gLuM4X0KSjGmOUTrJnsdTioRi7ou1UKyUDVFqqx6nEp53iNAq+1GW1pM/NCA5EfWEKZGCtmGg=="}
+
+
+[INFO ] 2017-12-06 15:59:49,406 method:com.pay.service.impl.PayServiceImpl.createOrder(PayServiceImpl.java:148)
+filePath:D:\MyWork\images\qr-10002.png
+
+
+[WARN ] 2017-12-06 16:06:08,611 method:com.alibaba.dubbo.remoting.transport.AbstractServer.disconnected(AbstractServer.java:197)
+ [DUBBO] All clients has discontected from /192.168.0.171:20886. You can graceful shutdown now., dubbo version: 2.5.3, current host: 127.0.0.1
+
+
+[INFO ] 2017-12-06 16:06:08,613 method:com.alibaba.dubbo.rpc.protocol.dubbo.DubboProtocol$1.disconnected(DubboProtocol.java:130)
+ [DUBBO] disconected from /192.168.0.171:50708,url:dubbo://192.168.0.171:20886/com.pay.service.PayService?anyhost=true&application=mydubbo_pay_p&channel.readonly.sent=true&codec=dubbo&dubbo=2.5.3&heartbeat=60000&interface=com.pay.service.PayService&methods=createOrder,aliCallback&pid=5540&side=provider&timeout=600000&timestamp=1512547147962, dubbo version: 2.5.3, current host: 127.0.0.1
