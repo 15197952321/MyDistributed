@@ -11,4 +11,7 @@ public interface TbOrderService {
     //从redis查询数据
     SCResult createOrder(TbOrder order);
 
+    //测试任务调度
+    void testTask();
+
 }
