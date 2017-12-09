@@ -31,7 +31,7 @@ public class TbOrderServiceImpl implements TbOrderService {
     private String ORDER_ID_GEN_KEY;
     @Value("${ORDER_ID_START}")
     private String ORDER_ID_START;
-    @Value("${ORDER_DETAIL_ID_GEN}")
+    @Value("${ORDER_DETAIL_ID_GEN_KEY}")
     private String ORDER_DETAIL_ID_GEN;
 
     @Override
@@ -74,5 +74,11 @@ public class TbOrderServiceImpl implements TbOrderService {
         }
 
         return new SCResult(200, "添加订单成功", orderId);
+    }
+
+    //
+    @Override
+    public void testTask() {
+        System.out.println("任务调度开启");
     }
 }
